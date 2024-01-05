@@ -7,6 +7,7 @@ namespace Database\Factories;
 use App\Models\Product;
 use App\Models\Provider;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Carbon;
 
 /**
  * @extends Factory<Product>
@@ -30,5 +31,19 @@ class ProductFactory extends Factory
             'set_to_publicly_reviewable' => fake()->optional()->date,
             'published_at' => fake()->optional()->date,
         ];
+    }
+
+    public function published(?Carbon $published_at = null): self
+    {
+        return $this->state(
+            fn (array $attributes) => ['published_at' => $published_at ?? now()]
+        );
+    }
+
+    public function draft(): self
+    {
+        return $this->state(
+            fn (array $attributes) => ['published_at' => null]
+        );
     }
 }

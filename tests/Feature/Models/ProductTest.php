@@ -31,3 +31,14 @@ it('has reviews.', function () {
         ->toHaveCount(2)
         ->each->toBeInstanceOf(Review::class);
 });
+
+it('only returns published products for published query scope.', function () {
+    // Arrange
+    Product::factory()->published()->create();
+    Product::factory()->draft()->create();
+
+    // Act && Assert
+    expect(Product::query()->published()->get())
+        ->toHaveCount(1)
+        ->first()->id->toEqual(1);
+});

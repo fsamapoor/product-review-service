@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -26,6 +27,8 @@ use Illuminate\Support\Collection;
  * @property Carbon|null $updated_at
  * @property Provider $provider
  * @property Collection<int, Review> $reviews
+ *
+ * @method published()
  */
 class Product extends Model
 {
@@ -37,6 +40,11 @@ class Product extends Model
         'set_to_publicly_reviewable' => 'datetime',
         'published_at' => 'datetime',
     ];
+
+    public function scopePublished(Builder $query): void
+    {
+        $query->whereNotNull('published_at');
+    }
 
     public function provider(): BelongsTo
     {
