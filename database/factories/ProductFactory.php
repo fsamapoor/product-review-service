@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Database\Factories;
 
 use App\Models\Product;
+use App\Models\Provider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -20,6 +21,7 @@ class ProductFactory extends Factory
     public function definition(): array
     {
         return [
+            'provider_id' => Provider::factory(),
             'name' => fake()->name,
             'description' => fake()->paragraph,
             'price' => fake()->paragraph,
