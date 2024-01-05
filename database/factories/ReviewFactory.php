@@ -30,4 +30,26 @@ class ReviewFactory extends Factory
             'status' => fake()->randomElement(array_values(ReviewStatus::cases())),
         ];
     }
+
+    public function status(ReviewStatus $reviewStatus): self
+    {
+        return $this->state(
+            fn (array $attributes) => ['status' => $reviewStatus->value]
+        );
+    }
+
+    public function approved(): self
+    {
+        return $this->status(ReviewStatus::APPROVED);
+    }
+
+    public function pending(): self
+    {
+        return $this->status(ReviewStatus::PENDING);
+    }
+
+    public function rejected(): self
+    {
+        return $this->status(ReviewStatus::REJECTED);
+    }
 }

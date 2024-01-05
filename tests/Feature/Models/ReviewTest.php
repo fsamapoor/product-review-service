@@ -29,3 +29,14 @@ it('belongs to a user.', function () {
     // Act & Assert
     expect($user->reviews()->first())->toBeInstanceOf(Review::class);
 });
+
+it('only returns approved reviews for approved query scope.', function () {
+    // Arrange
+    Review::factory()->approved()->create();
+    Review::factory()->pending()->create();
+
+    // Act && Assert
+    expect(Review::query()->approved()->get())
+        ->toHaveCount(1)
+        ->first()->id->toEqual(1);
+});

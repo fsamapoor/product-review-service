@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use App\Enums\ReviewStatus;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -17,6 +19,8 @@ use Illuminate\Support\Carbon;
  * @property Carbon|null $updated_at
  * @property User $user
  * @property Product $product
+ *
+ * @method approved()
  */
 class Review extends Model
 {
@@ -30,5 +34,10 @@ class Review extends Model
     public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);
+    }
+
+    public function scopeApproved(Builder $query): void
+    {
+        $query->where('status', ReviewStatus::APPROVED->value);
     }
 }
