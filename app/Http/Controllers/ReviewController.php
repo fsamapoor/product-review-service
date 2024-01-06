@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\DataTransferObjects\ReviewDTO;
+use App\Events\ReviewSubmitted;
 use App\Exceptions\ReviewException;
 use App\Http\Requests\StoreReviewRequest;
 use App\Models\Review;
@@ -33,9 +34,9 @@ class ReviewController extends Controller
                     EnsureProductCanBeVotedOn::class,
                 ])
                 ->then(function (ReviewDTO $storeReviewDTO) {
-                    Review::createFromDTO($storeReviewDTO);
+                    $review = Review::createFromDTO($storeReviewDTO);
 
-                    // TODO:: event review submitted
+                    event(new ReviewSubmitted($review));
                 });
 
             return response()->json([], Response::HTTP_CREATED);
