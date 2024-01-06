@@ -66,4 +66,27 @@ class Product extends Model
             ->latest()
             ->limit(3);
     }
+
+    public static function getPaginatedProducts() // @pest-ignore-type
+    {
+        return Product::query()
+            ->published()
+            ->latest()
+            ->with([
+                'provider',
+                'latestApprovedComments',
+            ])
+            ->withCount([
+                'reviews as total_reviews' => function (\Illuminate\Contracts\Database\Eloquent\Builder $query): Builder {
+                    /** @var Review $query */
+                    return $query->approved();
+                },
+                'reviews as reviews_with_votes_count' => function (Builder $query): Builder {
+                    /** @var Review $query */
+                    return $query->approved()->hasVote();
+                },
+            ])
+            ->withAvg('reviews', 'vote')
+            ->paginate(20);
+    }
 }
