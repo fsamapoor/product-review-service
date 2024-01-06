@@ -40,7 +40,9 @@ class ReviewController extends Controller
 
             return response()->json([], Response::HTTP_CREATED);
         } catch (Throwable $exception) {
-            // TODO:: log exception
+            logger()
+                ->channel('review')
+                ->error($exception->getMessage(), $storeReviewDTO->logContext());
 
             if ($exception instanceof ReviewException) {
                 return response()->json([

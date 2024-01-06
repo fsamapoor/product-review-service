@@ -18,4 +18,15 @@ readonly class ReviewDTO
         public User $user,
     ) {
     }
+
+    public function logContext(): array
+    {
+        return [
+            'comment' => $this->comment,
+            'vote' => $this->vote,
+            'product_id' => $this->product->id,
+            'review_status' => $this->reviewStatus->label(),
+            'user_id' => $this->user->id,
+        ];
+    }
 }
