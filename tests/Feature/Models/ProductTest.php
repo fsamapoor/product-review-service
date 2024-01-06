@@ -42,3 +42,20 @@ it('only returns published products for published query scope.', function () {
         ->toHaveCount(1)
         ->first()->id->toEqual(1);
 });
+
+it('can load latest approved comments.', function () {
+    // Arrange
+    $product = Product::factory()->create();
+
+    $reviews = Review::factory()
+        ->approved()
+        ->withComment()
+        ->count(5)
+        ->for($product)
+        ->create();
+
+    // Act & Assert
+    expect($product->latestApprovedComments)
+        ->toHaveCount(3)
+        ->each->toBeInstanceOf(Review::class);
+});

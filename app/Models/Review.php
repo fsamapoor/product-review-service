@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
+use Staudenmeir\EloquentEagerLimit\HasEagerLimit;
 
 /**
  * App\Models\Review
@@ -29,6 +30,7 @@ use Illuminate\Support\Carbon;
  */
 class Review extends Model
 {
+    use HasEagerLimit;
     use HasFactory;
 
     public function user(): BelongsTo

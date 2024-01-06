@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
+use Staudenmeir\EloquentEagerLimit\HasEagerLimit;
 
 /**
  * App\Models\Product
@@ -32,6 +33,7 @@ use Illuminate\Support\Collection;
  */
 class Product extends Model
 {
+    use HasEagerLimit;
     use HasFactory;
 
     protected $casts = [
@@ -54,5 +56,14 @@ class Product extends Model
     public function reviews(): HasMany
     {
         return $this->hasMany(Review::class);
+    }
+
+    public function latestApprovedComments(): HasMany
+    {
+        return $this->reviews()
+            ->approved()
+            ->hasComment()
+            ->latest()
+            ->limit(3);
     }
 }
