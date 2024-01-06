@@ -31,7 +31,10 @@ class ReviewController extends Controller
         } catch (Throwable $exception) {
             logger()
                 ->channel('review')
-                ->error($exception->getMessage(), $reviewDTO->logContext());
+                ->error(
+                    $exception->getMessage(),
+                    isset($reviewDTO) ? $reviewDTO->logContext() : [],
+                );
 
             if ($exception instanceof ReviewException) {
                 return response()->json([
