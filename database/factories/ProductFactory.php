@@ -25,7 +25,6 @@ class ProductFactory extends Factory
             'provider_id' => Provider::factory(),
             'name' => fake()->name,
             'description' => fake()->paragraph,
-            'price' => fake()->paragraph,
             'set_to_commentable_at' => fake()->optional()->date,
             'set_to_votable_at' => fake()->optional()->date,
             'set_to_publicly_reviewable' => fake()->optional()->date,

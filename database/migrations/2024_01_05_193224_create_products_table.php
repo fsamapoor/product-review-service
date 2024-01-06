@@ -16,7 +16,6 @@ return new class extends Migration
             $table->foreignIdFor(Provider::class)->constrained();
             $table->string('name');
             $table->text('description');
-            $table->unsignedInteger('price');
             $table->timestamp('set_to_commentable_at')->nullable();
             $table->timestamp('set_to_votable_at')->nullable();
             $table->timestamp('set_to_publicly_reviewable')->nullable();
