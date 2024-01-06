@@ -21,6 +21,8 @@ use Illuminate\Support\Carbon;
  * @property Product $product
  *
  * @method approved()
+ * @method hasComment()
+ * @method hasVote()
  */
 class Review extends Model
 {
@@ -39,5 +41,15 @@ class Review extends Model
     public function scopeApproved(Builder $query): void
     {
         $query->where('status', ReviewStatus::APPROVED->value);
+    }
+
+    public function scopeHasComment(Builder $query): void
+    {
+        $query->whereNotNull('review');
+    }
+
+    public function scopeHasVote(Builder $query): void
+    {
+        $query->whereNotNull('rating');
     }
 }

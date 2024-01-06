@@ -34,7 +34,7 @@ class ReviewFactory extends Factory
     public function status(ReviewStatus $reviewStatus): self
     {
         return $this->state(
-            fn (array $attributes) => ['status' => $reviewStatus->value]
+            fn(array $attributes) => ['status' => $reviewStatus->value]
         );
     }
 
@@ -51,5 +51,41 @@ class ReviewFactory extends Factory
     public function rejected(): self
     {
         return $this->status(ReviewStatus::REJECTED);
+    }
+
+    public function withVote(): self
+    {
+        return $this->state(
+            fn (array $attributes) => [
+                'rating' => fake()->randomElement([1, 2, 3, 4, 5]),
+            ]
+        );
+    }
+
+    public function withoutVote(): self
+    {
+        return $this->state(
+            fn (array $attributes) => [
+                'rating' => null,
+            ]
+        );
+    }
+
+    public function withComment(): self
+    {
+        return $this->state(
+            fn (array $attributes) => [
+                'review' => fake()->paragraph,
+            ]
+        );
+    }
+
+    public function withoutComment(): self
+    {
+        return $this->state(
+            fn (array $attributes) => [
+                'review' => null,
+            ]
+        );
     }
 }

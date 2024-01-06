@@ -40,3 +40,25 @@ it('only returns approved reviews for approved query scope.', function () {
         ->toHaveCount(1)
         ->first()->id->toEqual(1);
 });
+
+it('only returns reviews with comments for hasComment query scope.', function () {
+    // Arrange
+    Review::factory()->withComment()->withoutVote()->create();
+    Review::factory()->withVote()->withoutComment()->create();
+
+    // Act && Assert
+    expect(Review::query()->hasComment()->get())
+        ->toHaveCount(1)
+        ->first()->id->toEqual(1);
+});
+
+it('only returns reviews with votes for hasVote query scope.', function () {
+    // Arrange
+    Review::factory()->withVote()->withoutComment()->create();
+    Review::factory()->withComment()->withoutVote()->create();
+
+    // Act && Assert
+    expect(Review::query()->hasVote()->get())
+        ->toHaveCount(1)
+        ->first()->id->toEqual(1);
+});
