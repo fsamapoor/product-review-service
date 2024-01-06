@@ -27,7 +27,7 @@ class Handler extends ExceptionHandler
      */
     public function register(): void
     {
-        $this->renderable(function (NotFoundHttpException $e, $request) {
+        $this->renderable(function (NotFoundHttpException $e, $request) { // @pest-ignore-type
             if ($request->wantsJson()) {
                 $model = Str::of($e->getMessage())
                     ->between('[', ']')
