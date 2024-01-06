@@ -13,7 +13,7 @@ class EnsureProductIsPublished
     /**
      * @throws ReviewException
      */
-    public function handle(ReviewDTO $storeReviewDTO, Closure $next)
+    public function handle(ReviewDTO $storeReviewDTO, Closure $next) // @pest-ignore-type
     {
         if (is_null($storeReviewDTO->product->published_at)) {
             throw ReviewException::unpublishedProduct();

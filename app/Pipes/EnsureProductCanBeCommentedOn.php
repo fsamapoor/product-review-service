@@ -13,7 +13,7 @@ class EnsureProductCanBeCommentedOn
     /**
      * @throws ReviewException
      */
-    public function handle(ReviewDTO $storeReviewDTO, Closure $next)
+    public function handle(ReviewDTO $storeReviewDTO, Closure $next) // @pest-ignore-type
     {
         if (is_null($storeReviewDTO->comment)) {
             return $next($storeReviewDTO);

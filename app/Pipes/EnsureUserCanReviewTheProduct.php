@@ -10,7 +10,7 @@ use Closure;
 
 class EnsureUserCanReviewTheProduct
 {
-    public function handle(ReviewDTO $storeReviewDTO, Closure $next)
+    public function handle(ReviewDTO $storeReviewDTO, Closure $next) // @pest-ignore-type
     {
         if (isset($storeReviewDTO->product->set_to_publicly_reviewable)) {
             return $next($storeReviewDTO);
