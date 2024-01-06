@@ -45,7 +45,7 @@ class StoreReviewRequest extends FormRequest
         ];
     }
 
-    public function getStoreReviewDTO(): ReviewDTO
+    public function getReviewDTO(): ReviewDTO
     {
         /** @var User $user */
         $user = User::factory()->create();

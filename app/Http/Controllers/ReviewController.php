@@ -4,46 +4,27 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\DataTransferObjects\ReviewDTO;
-use App\Events\ReviewSubmitted;
+use App\Actions\StoreReviewAction;
 use App\Exceptions\ReviewException;
 use App\Http\Requests\StoreReviewRequest;
-use App\Models\Review;
-use App\Pipes\EnsureProductCanBeCommentedOn;
-use App\Pipes\EnsureProductCanBeVotedOn;
-use App\Pipes\EnsureProductIsPublished;
-use App\Pipes\EnsureUserCanReviewTheProduct;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Support\Facades\Pipeline;
 use Symfony\Component\HttpFoundation\Response;
 use Throwable;
 
 class ReviewController extends Controller
 {
-    public function store(StoreReviewRequest $request): JsonResponse
+    public function store(StoreReviewRequest $request, StoreReviewAction $storeReviewAction): JsonResponse
     {
-        // TODO:: refactor to Action class
         try {
-            $storeReviewDTO = $request->getStoreReviewDTO();
+            $reviewDTO = $request->getReviewDTO();
 
-            Pipeline::send($storeReviewDTO)
-                ->through([
-                    EnsureUserCanReviewTheProduct::class,
-                    EnsureProductIsPublished::class,
-                    EnsureProductCanBeCommentedOn::class,
-                    EnsureProductCanBeVotedOn::class,
-                ])
-                ->then(function (ReviewDTO $storeReviewDTO) {
-                    $review = Review::createFromDTO($storeReviewDTO);
-
-                    event(new ReviewSubmitted($review));
-                });
+            $storeReviewAction->handle($reviewDTO);
 
             return response()->json([], Response::HTTP_CREATED);
         } catch (Throwable $exception) {
             logger()
                 ->channel('review')
-                ->error($exception->getMessage(), $storeReviewDTO->logContext());
+                ->error($exception->getMessage(), $reviewDTO->logContext());
 
             if ($exception instanceof ReviewException) {
                 return response()->json([
