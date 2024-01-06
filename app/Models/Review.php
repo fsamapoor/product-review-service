@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use App\DataTransferObjects\ReviewDTO;
 use App\Enums\ReviewStatus;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -56,5 +57,19 @@ class Review extends Model
     public function scopeHasVote(Builder $query): void
     {
         $query->whereNotNull('vote');
+    }
+
+    public static function createFromDTO(ReviewDTO $storeReviewDTO): Review
+    {
+        /** @var Review $review */
+        $review = self::query()->create([
+            'user_id' => $storeReviewDTO->user->id,
+            'product_id' => $storeReviewDTO->product->id,
+            'comment' => $storeReviewDTO->comment,
+            'vote' => $storeReviewDTO->vote,
+            'status' => $storeReviewDTO->reviewStatus->value,
+        ]);
+
+        return $review;
     }
 }
