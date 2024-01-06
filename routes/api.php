@@ -21,6 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('/products/{product_id}/reviews', ReviewController::class)
-    ->whereNumber('product_id')
+Route::apiResource('/products/{product}/reviews', ReviewController::class)
     ->only(['store']);

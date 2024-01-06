@@ -17,11 +17,8 @@ class ReviewController extends Controller
     public function store(
         StoreReviewRequest $request,
         StoreReviewAction $storeReviewAction,
-        int $product_id,
+        Product $product,
     ): JsonResponse {
-        /** @var Product $product */
-        $product = Product::query()->findOrFail($product_id);
-
         try {
             $reviewDTO = $request->getReviewDTO($product);
 
