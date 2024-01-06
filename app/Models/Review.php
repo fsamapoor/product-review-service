@@ -15,6 +15,9 @@ use Illuminate\Support\Carbon;
  * App\Models\Review
  *
  * @property int $id
+ * @property int $status
+ * @property ?string $comment
+ * @property ?int $vote
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property User $user
@@ -45,11 +48,11 @@ class Review extends Model
 
     public function scopeHasComment(Builder $query): void
     {
-        $query->whereNotNull('review');
+        $query->whereNotNull('comment');
     }
 
     public function scopeHasVote(Builder $query): void
     {
-        $query->whereNotNull('rating');
+        $query->whereNotNull('vote');
     }
 }

@@ -25,8 +25,8 @@ class ReviewFactory extends Factory
         return [
             'user_id' => User::factory(),
             'product_id' => Product::factory(),
-            'review' => fake()->optional()->paragraph,
-            'rating' => fake()->optional()->randomElement([1, 2, 3, 4, 5]),
+            'comment' => fake()->optional()->paragraph,
+            'vote' => fake()->optional()->randomElement([1, 2, 3, 4, 5]),
             'status' => fake()->randomElement(array_values(ReviewStatus::cases())),
         ];
     }
@@ -34,7 +34,7 @@ class ReviewFactory extends Factory
     public function status(ReviewStatus $reviewStatus): self
     {
         return $this->state(
-            fn(array $attributes) => ['status' => $reviewStatus->value]
+            fn (array $attributes) => ['status' => $reviewStatus->value]
         );
     }
 
@@ -57,7 +57,7 @@ class ReviewFactory extends Factory
     {
         return $this->state(
             fn (array $attributes) => [
-                'rating' => fake()->randomElement([1, 2, 3, 4, 5]),
+                'vote' => fake()->randomElement([1, 2, 3, 4, 5]),
             ]
         );
     }
@@ -66,7 +66,7 @@ class ReviewFactory extends Factory
     {
         return $this->state(
             fn (array $attributes) => [
-                'rating' => null,
+                'vote' => null,
             ]
         );
     }
@@ -75,7 +75,7 @@ class ReviewFactory extends Factory
     {
         return $this->state(
             fn (array $attributes) => [
-                'review' => fake()->paragraph,
+                'comment' => fake()->paragraph,
             ]
         );
     }
@@ -84,7 +84,7 @@ class ReviewFactory extends Factory
     {
         return $this->state(
             fn (array $attributes) => [
-                'review' => null,
+                'comment' => null,
             ]
         );
     }

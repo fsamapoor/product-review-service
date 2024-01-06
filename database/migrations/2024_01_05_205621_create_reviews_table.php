@@ -18,8 +18,8 @@ return new class extends Migration
             $table->foreignIdFor(User::class)->constrained();
             $table->foreignIdFor(Product::class)->constrained();
             $table->tinyInteger('status')->default(ReviewStatus::PENDING->value);
-            $table->text('review')->nullable();
-            $table->tinyInteger('rating')->nullable();
+            $table->text('comment')->nullable();
+            $table->tinyInteger('vote')->nullable();
             $table->timestamps();
         });
     }
