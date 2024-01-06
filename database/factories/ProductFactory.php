@@ -45,4 +45,18 @@ class ProductFactory extends Factory
             fn (array $attributes) => ['published_at' => null]
         );
     }
+
+    public function commentable(?Carbon $commentable_at = null): self
+    {
+        return $this->state(
+            fn (array $attributes) => ['set_to_commentable_at' => $commentable_at ?? now()]
+        );
+    }
+
+    public function votable(?Carbon $votable_at = null): self
+    {
+        return $this->state(
+            fn (array $attributes) => ['set_to_votable_at' => $votable_at ?? now()]
+        );
+    }
 }
