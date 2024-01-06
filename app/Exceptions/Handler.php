@@ -5,7 +5,9 @@ declare(strict_types=1);
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
-use Throwable;
+use Illuminate\Support\Str;
+use Symfony\Component\HttpFoundation\Response as ResponseAlias;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Handler extends ExceptionHandler
 {
@@ -25,8 +27,19 @@ class Handler extends ExceptionHandler
      */
     public function register(): void
     {
-        $this->reportable(function (Throwable $e) {
-            //
+        $this->renderable(function (NotFoundHttpException $e, $request) {
+            if ($request->wantsJson()) {
+                $model = Str::of($e->getMessage())
+                    ->between('[', ']')
+                    ->afterLast('\\');
+
+                return response()->json(
+                    [
+                        'message' => 'Entry for ' . $model . ' not found.',
+                    ],
+                    ResponseAlias::HTTP_NOT_FOUND
+                );
+            }
         });
     }
 }
