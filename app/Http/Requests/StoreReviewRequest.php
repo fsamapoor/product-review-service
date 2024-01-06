@@ -53,7 +53,7 @@ class StoreReviewRequest extends FormRequest
 
         return new ReviewDTO(
             comment: $this->get(self::Comment),
-            vote: (int) $this->get(self::VOTE),
+            vote: $this->get(self::VOTE) ? ((int) $this->get(self::VOTE)) : null,
             product: Product::find($this->get(self::PRODUCT_ID)),
             reviewStatus: ReviewStatus::PENDING,
             user: $user,
