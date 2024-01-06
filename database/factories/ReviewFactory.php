@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
+use App\Enums\ReviewRating;
 use App\Enums\ReviewStatus;
 use App\Models\Product;
 use App\Models\Review;
@@ -26,7 +27,7 @@ class ReviewFactory extends Factory
             'user_id' => User::factory(),
             'product_id' => Product::factory(),
             'comment' => fake()->optional()->paragraph,
-            'vote' => fake()->optional()->randomElement([1, 2, 3, 4, 5]),
+            'vote' => fake()->optional()->randomElement(ReviewRating::values()),
             'status' => fake()->randomElement(array_values(ReviewStatus::cases())),
         ];
     }
@@ -57,7 +58,7 @@ class ReviewFactory extends Factory
     {
         return $this->state(
             fn (array $attributes) => [
-                'vote' => fake()->randomElement([1, 2, 3, 4, 5]),
+                'vote' => fake()->randomElement(ReviewRating::values()),
             ]
         );
     }
