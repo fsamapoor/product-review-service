@@ -7,16 +7,23 @@ namespace App\Http\Controllers;
 use App\Actions\StoreReviewAction;
 use App\Exceptions\ReviewException;
 use App\Http\Requests\StoreReviewRequest;
+use App\Models\Product;
 use Illuminate\Http\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Throwable;
 
 class ReviewController extends Controller
 {
-    public function store(StoreReviewRequest $request, StoreReviewAction $storeReviewAction): JsonResponse
-    {
+    public function store(
+        StoreReviewRequest $request,
+        StoreReviewAction $storeReviewAction,
+        int $product_id,
+    ): JsonResponse {
+        /** @var Product $product */
+        $product = Product::query()->findOrFail($product_id);
+
         try {
-            $reviewDTO = $request->getReviewDTO();
+            $reviewDTO = $request->getReviewDTO($product);
 
             $storeReviewAction->handle($reviewDTO);
 

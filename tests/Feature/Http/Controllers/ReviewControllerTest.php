@@ -25,8 +25,7 @@ it('can submit a review for commentable published products.', function () {
         ->create();
 
     // Act & Assert
-    postJson(route('reviews.store'), [
-        'product_id' => $product->id,
+    postJson(route('reviews.store', $product->id), [
         'comment' => 'a review for the product.',
     ])
         ->assertCreated();
@@ -42,8 +41,7 @@ it('can submit a review for votable published products.', function () {
         ->create();
 
     // Act & Assert
-    postJson(route('reviews.store'), [
-        'product_id' => $product->id,
+    postJson(route('reviews.store', $product->id), [
         'vote' => array_rand(ReviewRating::values()),
     ])
         ->assertCreated();
@@ -58,8 +56,7 @@ it('cannot submit a review for unpublished products.', function () {
         ->create();
 
     // Act & Assert
-    postJson(route('reviews.store'), [
-        'product_id' => $product->id,
+    postJson(route('reviews.store', $product->id), [
         'comment' => 'a review for the product.',
     ])
         ->assertForbidden();

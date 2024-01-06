@@ -17,8 +17,6 @@ class StoreReviewRequest extends FormRequest
 
     public const string VOTE = 'vote';
 
-    public const string PRODUCT_ID = 'product_id';
-
     /**
      * Get the validation rules that apply to the request.
      *
@@ -27,11 +25,6 @@ class StoreReviewRequest extends FormRequest
     public function rules(): array
     {
         return [
-            self::PRODUCT_ID => [
-                'required',
-                'int',
-                'exists:App\Models\Product,id',
-            ],
             self::Comment => [
                 'required_without:' . self::VOTE,
                 'string',
@@ -39,13 +32,13 @@ class StoreReviewRequest extends FormRequest
             ],
             self::VOTE => [
                 'required_without:' . self::Comment,
-                'int',
+                'integer',
                 'in:' . implode(',', ReviewRating::values()),
             ],
         ];
     }
 
-    public function getReviewDTO(): ReviewDTO
+    public function getReviewDTO(Product $product): ReviewDTO
     {
         /** @var User $user */
         $user = User::factory()->create();
@@ -53,8 +46,8 @@ class StoreReviewRequest extends FormRequest
 
         return new ReviewDTO(
             comment: $this->get(self::Comment),
-            vote: $this->get(self::VOTE) ? ((int) $this->get(self::VOTE)) : null,
-            product: Product::find($this->get(self::PRODUCT_ID)),
+            vote: $this->get(self::VOTE),
+            product: $product,
             reviewStatus: ReviewStatus::PENDING,
             user: $user,
         );
