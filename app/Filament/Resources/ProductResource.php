@@ -18,6 +18,8 @@ class ProductResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-bolt';
 
+    protected static ?string $navigationGroup = 'Review service';
+
     public static function form(Form $form): Form
     {
         return $form

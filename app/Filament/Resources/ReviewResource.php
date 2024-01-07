@@ -19,6 +19,8 @@ class ReviewResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-bottom-center-text';
 
+    protected static ?string $navigationGroup = 'Review service';
+
     public static function form(Form $form): Form
     {
         return $form
