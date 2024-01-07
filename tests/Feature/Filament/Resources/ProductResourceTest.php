@@ -53,6 +53,8 @@ it('can render view product page.', function () {
         ->assertSuccessful();
 });
 
-it('can create a new product.', function () {})->todo();
+it('can create a new product.', function () {
+})->todo();
 
-it('can update product model.', function () {})->todo();
+it('can update product model.', function () {
+})->todo();
