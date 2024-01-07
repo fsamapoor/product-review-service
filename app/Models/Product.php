@@ -17,6 +17,7 @@ use Staudenmeir\EloquentEagerLimit\HasEagerLimit;
  * App\Models\Product
  *
  * @property int $id
+ * @property int $provider_id
  * @property string $name
  * @property string $description
  * @property int $price
