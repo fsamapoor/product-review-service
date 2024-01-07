@@ -8,9 +8,13 @@ use App\Enums\ReviewStatus;
 use App\Filament\Resources\ReviewResource\Pages;
 use App\Models\Review;
 use Filament\Forms;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
+use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
+use Filament\Support\Enums\MaxWidth;
 use Filament\Tables;
+use Filament\Tables\Actions\Action;
 use Filament\Tables\Table;
 
 class ReviewResource extends Resource
@@ -25,18 +29,19 @@ class ReviewResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('user_id')
-                    ->relationship('user', 'name')
-                    ->required(),
-                Forms\Components\Select::make('product_id')
-                    ->relationship('product', 'name')
-                    ->required(),
+                Forms\Components\TextInput::make('user_id')
+                    ->formatStateUsing(function (Review $record): string {
+                        return $record->user->name;
+                    }),
+                Forms\Components\TextInput::make('product_id')
+                    ->formatStateUsing(function (Review $record): string {
+                        return $record->product->name;
+                    }),
                 Forms\Components\TextInput::make('status')
-                    ->required()
-                    ->numeric()
-                    ->default(0),
-                Forms\Components\TextInput::make('vote')
-                    ->numeric(),
+                    ->formatStateUsing(function (int $state): string {
+                        return ReviewStatus::tryFrom($state)->label();
+                    }),
+                Forms\Components\TextInput::make('vote'),
                 Forms\Components\Textarea::make('comment')
                     ->columnSpanFull(),
             ]);
@@ -79,7 +84,24 @@ class ReviewResource extends Resource
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
+                Action::make('change_status')
+                    ->icon('heroicon-o-arrow-path')
+                    ->modalWidth(MaxWidth::Medium)
+                    ->color('info')
+                    ->form([
+                        Select::make('status')
+                            ->options(ReviewStatus::options())
+                            ->required(),
+                    ])
+                    ->action(function (array $data, Review $record): void {
+                        $record->status = $data['status'];
+                        $record->save();
+
+                        Notification::make()
+                            ->title('Status updated successfully!')
+                            ->success()
+                            ->send();
+                    }),
             ]);
     }
 
@@ -94,8 +116,6 @@ class ReviewResource extends Resource
     {
         return [
             'index' => Pages\ListReviews::route('/'),
-            'view' => Pages\ViewReview::route('/{record}'),
-            'edit' => Pages\EditReview::route('/{record}/edit'),
         ];
     }
 }

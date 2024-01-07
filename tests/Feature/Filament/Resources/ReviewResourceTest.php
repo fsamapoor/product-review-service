@@ -13,7 +13,7 @@ beforeEach(function () {
     login();
 });
 
-it('can render index page of the Product resource.', function () {
+it('can render index page of the Review resource.', function () {
     // Act & Assert
     get(ReviewResource::getUrl())->assertOk();
 });
@@ -28,30 +28,15 @@ it('can list reviews in the table.', function () {
     livewire(ReviewResource\Pages\ListReviews::class)
         ->assertCanSeeTableRecords($reviews)
         ->assertTableActionExists('view')
-        ->assertTableActionExists('edit')
+        ->assertTableActionDoesNotExist('edit')
         ->assertTableActionDoesNotExist('delete');
 });
 
-it('can not render create product page.', function () {
+it('can not render create review page.', function () {
     // Act & Assert
     get(ReviewResource::getUrl('create'))
         ->assertNotFound();
 })->throws(RouteNotFoundException::class);
 
-it('can render edit product page.', function () {
-    // Act & Assert
-    get(ReviewResource::getUrl('edit', [
-        'record' => Review::factory()->create(),
-    ]))
-        ->assertSuccessful();
-});
-
-it('can render view product page.', function () {
-    // Act & Assert
-    get(ReviewResource::getUrl('view', [
-        'record' => Review::factory()->create(),
-    ]))
-        ->assertSuccessful();
-});
-
-it('can update review model.', function () {})->todo();
+it('can update review model.', function () {
+})->todo();
