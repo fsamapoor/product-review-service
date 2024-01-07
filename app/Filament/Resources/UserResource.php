@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\UserResource\Pages;
+use App\Filament\Resources\UserResource\RelationManagers\ReviewsRelationManager;
 use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -87,7 +88,7 @@ class UserResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            ReviewsRelationManager::class,
         ];
     }
 
