@@ -64,8 +64,9 @@ class ReviewResource extends Resource
                     ->getStateUsing(function (Review $record): string {
                         return ReviewStatus::tryFrom($record->status)->label();
                     }),
-                Tables\Columns\TextColumn::make('vote')
-                    ->numeric(),
+                Tables\Columns\TextColumn::make('vote'),
+                Tables\Columns\TextColumn::make('comment')
+                    ->limit(50),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->toggleable(isToggledHiddenByDefault: true),
