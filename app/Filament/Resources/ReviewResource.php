@@ -45,7 +45,10 @@ class ReviewResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('user.name')
-                    ->numeric(),
+                    ->url(function (Review $record): string {
+                        return route('filament.admin.resources.users.view', $record->user_id);
+                    })
+                    ->color('warning'),
                 Tables\Columns\TextColumn::make('product.name')
                     ->url(function (Review $record): string {
                         return route('filament.admin.resources.products.view', $record->product_id);
