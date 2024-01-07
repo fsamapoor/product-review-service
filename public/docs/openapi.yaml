@@ -1,0 +1,1641 @@
+openapi: 3.0.3
+info:
+  title: Review
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://127.0.0.1:8000'
+paths:
+  /api/products:
+    get:
+      summary: ''
+      operationId: getApiProducts
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  products:
+                    current_page: 1
+                    data:
+                      -
+                        id: 47
+                        provider_id: 47
+                        name: 'Ebba Osinski'
+                        description: 'Molestiae aut iusto et odit quia iusto quisquam. Qui explicabo quis incidunt. Est molestiae commodi illo praesentium vel possimus.'
+                        set_to_commentable_at: null
+                        set_to_votable_at: null
+                        set_to_publicly_reviewable: null
+                        published_at: '1984-04-19T20:30:00.000000Z'
+                        created_at: '2024-01-06T21:26:27.000000Z'
+                        updated_at: '2024-01-06T21:26:27.000000Z'
+                        total_reviews: 4
+                        reviews_with_votes_count: 3
+                        reviews_avg_vote: 2.3333333333333
+                        price: 5612637
+                        provider:
+                          id: 47
+                          name: 'Gabrielle Moore'
+                          created_at: '2024-01-06T21:26:20.000000Z'
+                          updated_at: '2024-01-06T21:26:20.000000Z'
+                        latest_approved_comments:
+                          -
+                            id: 464
+                            user_id: 464
+                            product_id: 47
+                            status: 1
+                            comment: 'Nisi minus beatae non ipsa minima quae ut. Pariatur velit quia illum aut. Unde molestias ratione excepturi doloremque iure.'
+                            vote: null
+                            created_at: '2024-01-06T21:26:27.000000Z'
+                            updated_at: '2024-01-06T21:26:27.000000Z'
+                          -
+                            id: 470
+                            user_id: 470
+                            product_id: 47
+                            status: 1
+                            comment: 'Impedit quia doloremque aut assumenda deleniti et. Et eligendi et sint placeat voluptas ullam tempora. Ipsum fugiat voluptatem vel ut.'
+                            vote: 2
+                            created_at: '2024-01-06T21:26:27.000000Z'
+                            updated_at: '2024-01-06T21:26:27.000000Z'
+                      -
+                        id: 49
+                        provider_id: 49
+                        name: 'Miss Sincere Bosco PhD'
+                        description: 'Dolor eos laboriosam et fugiat. Amet provident magnam et. Autem sequi nesciunt perspiciatis excepturi.'
+                        set_to_commentable_at: null
+                        set_to_votable_at: null
+                        set_to_publicly_reviewable: '2023-09-12T20:30:00.000000Z'
+                        published_at: '1977-07-02T19:30:00.000000Z'
+                        created_at: '2024-01-06T21:26:27.000000Z'
+                        updated_at: '2024-01-06T21:26:27.000000Z'
+                        total_reviews: 2
+                        reviews_with_votes_count: 1
+                        reviews_avg_vote: 2.2
+                        price: 2753340
+                        provider:
+                          id: 49
+                          name: 'Caitlyn Kutch'
+                          created_at: '2024-01-06T21:26:20.000000Z'
+                          updated_at: '2024-01-06T21:26:20.000000Z'
+                        latest_approved_comments: []
+                      -
+                        id: 40
+                        provider_id: 40
+                        name: 'Angela Bernhard'
+                        description: 'Ipsam ad quia eaque repudiandae voluptatem eos voluptates. Itaque ut qui nostrum voluptatum distinctio a occaecati. Dolores facere architecto dolor accusantium consequuntur voluptatibus.'
+                        set_to_commentable_at: null
+                        set_to_votable_at: '1996-01-21T20:30:00.000000Z'
+                        set_to_publicly_reviewable: null
+                        published_at: '1997-11-06T20:30:00.000000Z'
+                        created_at: '2024-01-06T21:26:26.000000Z'
+                        updated_at: '2024-01-06T21:26:26.000000Z'
+                        total_reviews: 4
+                        reviews_with_votes_count: 3
+                        reviews_avg_vote: 2.5
+                        price: 5342511
+                        provider:
+                          id: 40
+                          name: 'Greg Bergnaum III'
+                          created_at: '2024-01-06T21:26:20.000000Z'
+                          updated_at: '2024-01-06T21:26:20.000000Z'
+                        latest_approved_comments:
+                          -
+                            id: 396
+                            user_id: 396
+                            product_id: 40
+                            status: 1
+                            comment: 'Et qui cumque velit magnam et aliquid nisi. Odit qui facilis eum quisquam sint. Sunt hic labore iste dolorum ea necessitatibus sunt.'
+                            vote: 2
+                            created_at: '2024-01-06T21:26:26.000000Z'
+                            updated_at: '2024-01-06T21:26:26.000000Z'
+                          -
+                            id: 400
+                            user_id: 400
+                            product_id: 40
+                            status: 1
+                            comment: 'Asperiores cupiditate illo libero modi aut vel vel rerum. Consequatur dolor qui repellendus beatae deserunt et. Quia amet omnis quo nisi voluptas doloribus. Voluptatem beatae in et illum qui eum fuga.'
+                            vote: 2
+                            created_at: '2024-01-06T21:26:26.000000Z'
+                            updated_at: '2024-01-06T21:26:26.000000Z'
+                      -
+                        id: 41
+                        provider_id: 41
+                        name: 'Sam Schuster'
+                        description: 'Veritatis nisi distinctio neque rerum quisquam. Molestiae sit cumque eligendi voluptates possimus laborum asperiores quasi. Delectus laudantium omnis error dolores ut velit qui. Provident ullam molestias dignissimos odit.'
+                        set_to_commentable_at: null
+                        set_to_votable_at: null
+                        set_to_publicly_reviewable: '1980-05-02T19:30:00.000000Z'
+                        published_at: '2016-01-16T20:30:00.000000Z'
+                        created_at: '2024-01-06T21:26:26.000000Z'
+                        updated_at: '2024-01-06T21:26:26.000000Z'
+                        total_reviews: 2
+                        reviews_with_votes_count: 0
+                        reviews_avg_vote: 2.8
+                        price: 6674469
+                        provider:
+                          id: 41
+                          name: 'Werner Jacobson'
+                          created_at: '2024-01-06T21:26:20.000000Z'
+                          updated_at: '2024-01-06T21:26:20.000000Z'
+                        latest_approved_comments: []
+                      -
+                        id: 43
+                        provider_id: 43
+                        name: 'Ashly Terry'
+                        description: 'Magni et voluptas enim ea. Asperiores inventore dicta est omnis beatae aut rem a. Consequuntur voluptas vel ducimus. Tempora quia aut at eligendi rerum.'
+                        set_to_commentable_at: null
+                        set_to_votable_at: '1970-03-16T20:30:00.000000Z'
+                        set_to_publicly_reviewable: null
+                        published_at: '2015-07-27T19:30:00.000000Z'
+                        created_at: '2024-01-06T21:26:26.000000Z'
+                        updated_at: '2024-01-06T21:26:26.000000Z'
+                        total_reviews: 1
+                        reviews_with_votes_count: 1
+                        reviews_avg_vote: 3.1111111111111
+                        price: 9246771
+                        provider:
+                          id: 43
+                          name: 'Mayra Johns'
+                          created_at: '2024-01-06T21:26:20.000000Z'
+                          updated_at: '2024-01-06T21:26:20.000000Z'
+                        latest_approved_comments: []
+                      -
+                        id: 44
+                        provider_id: 44
+                        name: 'Joy Eichmann'
+                        description: 'Veritatis vitae dolor consequatur veritatis. Ipsum eius incidunt quod labore consequatur vero. Asperiores atque recusandae dolor praesentium commodi. Voluptate nihil distinctio excepturi et enim placeat.'
+                        set_to_commentable_at: '1992-12-09T20:30:00.000000Z'
+                        set_to_votable_at: '2017-11-10T20:30:00.000000Z'
+                        set_to_publicly_reviewable: '2004-10-08T20:30:00.000000Z'
+                        published_at: '1992-12-23T20:30:00.000000Z'
+                        created_at: '2024-01-06T21:26:26.000000Z'
+                        updated_at: '2024-01-06T21:26:26.000000Z'
+                        total_reviews: 6
+                        reviews_with_votes_count: 5
+                        reviews_avg_vote: 2.875
+                        price: 9387390
+                        provider:
+                          id: 44
+                          name: 'Grayson Corwin PhD'
+                          created_at: '2024-01-06T21:26:20.000000Z'
+                          updated_at: '2024-01-06T21:26:20.000000Z'
+                        latest_approved_comments:
+                          -
+                            id: 436
+                            user_id: 436
+                            product_id: 44
+                            status: 1
+                            comment: 'A doloribus a tempora aut temporibus. Dolorem rerum fugiat molestiae. Beatae labore iusto nemo neque. Repudiandae fugiat eligendi ducimus sapiente.'
+                            vote: 1
+                            created_at: '2024-01-06T21:26:27.000000Z'
+                            updated_at: '2024-01-06T21:26:27.000000Z'
+                          -
+                            id: 440
+                            user_id: 440
+                            product_id: 44
+                            status: 1
+                            comment: 'Facilis aperiam qui at fuga ad blanditiis quaerat. Asperiores atque et perspiciatis sed. Blanditiis odio earum ut quis qui. Iure animi ut occaecati blanditiis. Voluptatibus quibusdam commodi esse est vel nulla laboriosam.'
+                            vote: 3
+                            created_at: '2024-01-06T21:26:27.000000Z'
+                            updated_at: '2024-01-06T21:26:27.000000Z'
+                          -
+                            id: 431
+                            user_id: 431
+                            product_id: 44
+                            status: 1
+                            comment: 'Quasi officia possimus at dolorum. Magni beatae et soluta non. Quia quaerat natus iure qui non explicabo libero.'
+                            vote: null
+                            created_at: '2024-01-06T21:26:26.000000Z'
+                            updated_at: '2024-01-06T21:26:26.000000Z'
+                      -
+                        id: 32
+                        provider_id: 32
+                        name: 'Oren Dooley'
+                        description: 'Aut molestiae explicabo impedit dolorem tempora repellat amet. Officiis voluptas consequuntur ut cum dicta esse. Aut delectus odio nesciunt ea laboriosam praesentium.'
+                        set_to_commentable_at: null
+                        set_to_votable_at: null
+                        set_to_publicly_reviewable: '1991-10-27T20:30:00.000000Z'
+                        published_at: '1987-07-18T20:30:00.000000Z'
+                        created_at: '2024-01-06T21:26:25.000000Z'
+                        updated_at: '2024-01-06T21:26:25.000000Z'
+                        total_reviews: 3
+                        reviews_with_votes_count: 2
+                        reviews_avg_vote: 2.1428571428571
+                        price: 9619027
+                        provider:
+                          id: 32
+                          name: 'Orie Sanford'
+                          created_at: '2024-01-06T21:26:20.000000Z'
+                          updated_at: '2024-01-06T21:26:20.000000Z'
+                        latest_approved_comments: []
+                      -
+                        id: 25
+                        provider_id: 25
+                        name: 'Magnolia Mraz'
+                        description: 'Numquam repellendus pariatur aut libero quia mollitia. Eveniet commodi corporis eos asperiores quasi et eos. Voluptatibus praesentium asperiores labore qui. Enim accusantium pariatur modi est qui expedita ut voluptas. Necessitatibus omnis culpa facere voluptatem in.'
+                        set_to_commentable_at: null
+                        set_to_votable_at: null
+                        set_to_publicly_reviewable: '2011-10-31T20:30:00.000000Z'
+                        published_at: '2020-01-31T20:30:00.000000Z'
+                        created_at: '2024-01-06T21:26:24.000000Z'
+                        updated_at: '2024-01-06T21:26:24.000000Z'
+                        total_reviews: 2
+                        reviews_with_votes_count: 0
+                        reviews_avg_vote: 3.3333333333333
+                        price: 5790328
+                        provider:
+                          id: 25
+                          name: 'Leopoldo Dicki'
+                          created_at: '2024-01-06T21:26:19.000000Z'
+                          updated_at: '2024-01-06T21:26:19.000000Z'
+                        latest_approved_comments:
+                          -
+                            id: 247
+                            user_id: 247
+                            product_id: 25
+                            status: 1
+                            comment: 'Qui rem voluptatum reiciendis cupiditate in autem est. Magni sed qui aut itaque dignissimos pariatur. Omnis perferendis cumque incidunt esse ipsam quos deserunt. Blanditiis omnis omnis magni et nihil. Accusantium error quod voluptatum et.'
+                            vote: null
+                            created_at: '2024-01-06T21:26:24.000000Z'
+                            updated_at: '2024-01-06T21:26:24.000000Z'
+                      -
+                        id: 26
+                        provider_id: 26
+                        name: 'Dr. Hyman Schuster V'
+                        description: 'Quis iure voluptatibus dolor accusamus. Non possimus quo perferendis expedita eos id libero. Eveniet minima incidunt iste rerum consequatur sed dolores.'
+                        set_to_commentable_at: null
+                        set_to_votable_at: '1979-05-19T20:30:00.000000Z'
+                        set_to_publicly_reviewable: null
+                        published_at: '1982-03-21T20:30:00.000000Z'
+                        created_at: '2024-01-06T21:26:24.000000Z'
+                        updated_at: '2024-01-06T21:26:24.000000Z'
+                        total_reviews: 7
+                        reviews_with_votes_count: 2
+                        reviews_avg_vote: 1.6666666666667
+                        price: 6711373
+                        provider:
+                          id: 26
+                          name: 'Dr. Belle Ortiz'
+                          created_at: '2024-01-06T21:26:19.000000Z'
+                          updated_at: '2024-01-06T21:26:19.000000Z'
+                        latest_approved_comments:
+                          -
+                            id: 252
+                            user_id: 252
+                            product_id: 26
+                            status: 1
+                            comment: 'Laudantium et eius vel consequatur dolore optio deleniti quidem. Quidem corrupti numquam velit tenetur similique. Quo deleniti harum dolorem nulla quis. Aut quod et ea cupiditate. Eaque velit cum voluptas placeat.'
+                            vote: null
+                            created_at: '2024-01-06T21:26:24.000000Z'
+                            updated_at: '2024-01-06T21:26:24.000000Z'
+                          -
+                            id: 256
+                            user_id: 256
+                            product_id: 26
+                            status: 1
+                            comment: 'At eveniet dolores est molestiae corrupti voluptas. Reiciendis sed corporis animi eum quis cum unde possimus. Laboriosam aut ipsam magni.'
+                            vote: null
+                            created_at: '2024-01-06T21:26:24.000000Z'
+                            updated_at: '2024-01-06T21:26:24.000000Z'
+                          -
+                            id: 258
+                            user_id: 258
+                            product_id: 26
+                            status: 1
+                            comment: 'Libero neque necessitatibus et incidunt expedita laudantium. Impedit illo autem illum consequatur deserunt. Ut voluptatem saepe numquam consequuntur. Quod animi necessitatibus pariatur consectetur.'
+                            vote: null
+                            created_at: '2024-01-06T21:26:24.000000Z'
+                            updated_at: '2024-01-06T21:26:24.000000Z'
+                      -
+                        id: 29
+                        provider_id: 29
+                        name: "Valentin O'Connell"
+                        description: 'Et temporibus autem dolorum. Mollitia ratione incidunt deserunt et. Repellat sit amet atque sequi architecto corrupti.'
+                        set_to_commentable_at: '1972-11-10T20:30:00.000000Z'
+                        set_to_votable_at: '1987-09-24T20:30:00.000000Z'
+                        set_to_publicly_reviewable: null
+                        published_at: '1978-10-28T20:00:00.000000Z'
+                        created_at: '2024-01-06T21:26:24.000000Z'
+                        updated_at: '2024-01-06T21:26:24.000000Z'
+                        total_reviews: 6
+                        reviews_with_votes_count: 2
+                        reviews_avg_vote: 2.5
+                        price: 643727
+                        provider:
+                          id: 29
+                          name: 'Prof. Hazle Konopelski DDS'
+                          created_at: '2024-01-06T21:26:19.000000Z'
+                          updated_at: '2024-01-06T21:26:19.000000Z'
+                        latest_approved_comments:
+                          -
+                            id: 281
+                            user_id: 281
+                            product_id: 29
+                            status: 1
+                            comment: 'Veniam placeat soluta in dignissimos enim. Eos dolor voluptatibus aliquid porro. Velit eum placeat repellendus sit ipsam. Iure quod odio architecto.'
+                            vote: 3
+                            created_at: '2024-01-06T21:26:24.000000Z'
+                            updated_at: '2024-01-06T21:26:24.000000Z'
+                          -
+                            id: 282
+                            user_id: 282
+                            product_id: 29
+                            status: 1
+                            comment: 'Quia dolore et sed consequuntur. Quis omnis deserunt laudantium omnis aut. Soluta quis quis hic et veniam.'
+                            vote: null
+                            created_at: '2024-01-06T21:26:24.000000Z'
+                            updated_at: '2024-01-06T21:26:24.000000Z'
+                          -
+                            id: 283
+                            user_id: 283
+                            product_id: 29
+                            status: 1
+                            comment: 'Est itaque et neque blanditiis assumenda ullam. Qui necessitatibus nostrum et dolores voluptatibus est totam nesciunt. Illo aspernatur quia tempore adipisci consectetur nostrum. Architecto qui nesciunt eos reiciendis.'
+                            vote: null
+                            created_at: '2024-01-06T21:26:24.000000Z'
+                            updated_at: '2024-01-06T21:26:24.000000Z'
+                      -
+                        id: 19
+                        provider_id: 19
+                        name: 'Uriah Tromp I'
+                        description: 'Perferendis nemo sunt sit nihil iure. Voluptatem error ut dolorem maxime voluptate qui. Corporis iste error aperiam sit illum illum.'
+                        set_to_commentable_at: '1978-04-18T19:00:00.000000Z'
+                        set_to_votable_at: '1978-12-26T20:00:00.000000Z'
+                        set_to_publicly_reviewable: null
+                        published_at: '2014-03-27T19:30:00.000000Z'
+                        created_at: '2024-01-06T21:26:23.000000Z'
+                        updated_at: '2024-01-06T21:26:23.000000Z'
+                        total_reviews: 3
+                        reviews_with_votes_count: 2
+                        reviews_avg_vote: 4.25
+                        price: 4297195
+                        provider:
+                          id: 19
+                          name: 'Abdiel Kshlerin DDS'
+                          created_at: '2024-01-06T21:26:19.000000Z'
+                          updated_at: '2024-01-06T21:26:19.000000Z'
+                        latest_approved_comments:
+                          -
+                            id: 181
+                            user_id: 181
+                            product_id: 19
+                            status: 1
+                            comment: 'Quod ut eum et rem reiciendis voluptates. Labore ipsam beatae sunt asperiores reiciendis consequatur fugit. Voluptate illum commodi libero.'
+                            vote: 5
+                            created_at: '2024-01-06T21:26:23.000000Z'
+                            updated_at: '2024-01-06T21:26:23.000000Z'
+                          -
+                            id: 185
+                            user_id: 185
+                            product_id: 19
+                            status: 1
+                            comment: 'Et id laboriosam nihil consectetur. Cum molestias qui eligendi nam. Sed necessitatibus quibusdam repudiandae tenetur. Qui laboriosam quos rerum deserunt sunt.'
+                            vote: 4
+                            created_at: '2024-01-06T21:26:23.000000Z'
+                            updated_at: '2024-01-06T21:26:23.000000Z'
+                      -
+                        id: 24
+                        provider_id: 24
+                        name: 'Sigmund Moore'
+                        description: 'Cum itaque natus aut natus reiciendis delectus. Vero repellendus omnis provident voluptas quia. Placeat eveniet necessitatibus libero quia exercitationem.'
+                        set_to_commentable_at: null
+                        set_to_votable_at: '1992-12-03T20:30:00.000000Z'
+                        set_to_publicly_reviewable: null
+                        published_at: '1989-08-19T20:30:00.000000Z'
+                        created_at: '2024-01-06T21:26:23.000000Z'
+                        updated_at: '2024-01-06T21:26:23.000000Z'
+                        total_reviews: 5
+                        reviews_with_votes_count: 3
+                        reviews_avg_vote: 3.6666666666667
+                        price: 6360242
+                        provider:
+                          id: 24
+                          name: 'Alanna Pollich'
+                          created_at: '2024-01-06T21:26:19.000000Z'
+                          updated_at: '2024-01-06T21:26:19.000000Z'
+                        latest_approved_comments:
+                          -
+                            id: 231
+                            user_id: 231
+                            product_id: 24
+                            status: 1
+                            comment: 'Explicabo architecto accusamus saepe dolor officia. Qui non repellat rerum est magni tempore voluptates eaque. Culpa repellendus aliquam dolor. Quo minus molestiae quia sunt sit nobis.'
+                            vote: null
+                            created_at: '2024-01-06T21:26:23.000000Z'
+                            updated_at: '2024-01-06T21:26:23.000000Z'
+                      -
+                        id: 12
+                        provider_id: 12
+                        name: 'Ms. Albina Simonis'
+                        description: 'Amet nostrum quia velit aut et voluptas. Qui iusto esse enim sunt magni et. Minima dolore necessitatibus voluptatibus in rem.'
+                        set_to_commentable_at: '1975-05-15T20:30:00.000000Z'
+                        set_to_votable_at: null
+                        set_to_publicly_reviewable: null
+                        published_at: '1977-08-22T19:30:00.000000Z'
+                        created_at: '2024-01-06T21:26:22.000000Z'
+                        updated_at: '2024-01-06T21:26:22.000000Z'
+                        total_reviews: 4
+                        reviews_with_votes_count: 3
+                        reviews_avg_vote: 3
+                        price: 6394872
+                        provider:
+                          id: 12
+                          name: 'Madeline Kohler I'
+                          created_at: '2024-01-06T21:26:19.000000Z'
+                          updated_at: '2024-01-06T21:26:19.000000Z'
+                        latest_approved_comments: []
+                      -
+                        id: 13
+                        provider_id: 13
+                        name: 'Johnnie Hand'
+                        description: 'Autem nihil a doloremque. Similique vitae laudantium eum molestiae aspernatur pariatur. Esse minima ea est vel odio nobis odio. Fugiat veniam dolorem iusto expedita dolor.'
+                        set_to_commentable_at: null
+                        set_to_votable_at: null
+                        set_to_publicly_reviewable: '1970-08-05T20:30:00.000000Z'
+                        published_at: '1991-01-26T20:30:00.000000Z'
+                        created_at: '2024-01-06T21:26:22.000000Z'
+                        updated_at: '2024-01-06T21:26:22.000000Z'
+                        total_reviews: 5
+                        reviews_with_votes_count: 1
+                        reviews_avg_vote: 3
+                        price: 9024450
+                        provider:
+                          id: 13
+                          name: 'Prof. Mitchell Jerde'
+                          created_at: '2024-01-06T21:26:19.000000Z'
+                          updated_at: '2024-01-06T21:26:19.000000Z'
+                        latest_approved_comments: []
+                      -
+                        id: 15
+                        provider_id: 15
+                        name: 'Gage Greenholt MD'
+                        description: 'Quos autem voluptatibus architecto velit. Et modi totam inventore dignissimos sit id reiciendis. Voluptate tempora nam ipsam atque necessitatibus beatae. Architecto aspernatur fugiat quia nihil animi repellendus.'
+                        set_to_commentable_at: '2022-07-08T19:30:00.000000Z'
+                        set_to_votable_at: '1992-10-24T20:30:00.000000Z'
+                        set_to_publicly_reviewable: null
+                        published_at: '1972-12-11T20:30:00.000000Z'
+                        created_at: '2024-01-06T21:26:22.000000Z'
+                        updated_at: '2024-01-06T21:26:22.000000Z'
+                        total_reviews: 4
+                        reviews_with_votes_count: 3
+                        reviews_avg_vote: 2.875
+                        price: 460308
+                        provider:
+                          id: 15
+                          name: 'Earnest Ledner'
+                          created_at: '2024-01-06T21:26:19.000000Z'
+                          updated_at: '2024-01-06T21:26:19.000000Z'
+                        latest_approved_comments:
+                          -
+                            id: 142
+                            user_id: 142
+                            product_id: 15
+                            status: 1
+                            comment: 'Minima sunt labore molestiae cupiditate dolorem voluptas. Hic aut sapiente et. Quae facilis ad velit aliquam. Debitis id ipsum unde animi.'
+                            vote: 3
+                            created_at: '2024-01-06T21:26:22.000000Z'
+                            updated_at: '2024-01-06T21:26:22.000000Z'
+                          -
+                            id: 143
+                            user_id: 143
+                            product_id: 15
+                            status: 1
+                            comment: 'Nihil et similique occaecati qui consequatur. Fugiat sed ut aut debitis minus quibusdam ut nihil. Sint laboriosam quis omnis. Itaque sunt dignissimos numquam.'
+                            vote: null
+                            created_at: '2024-01-06T21:26:22.000000Z'
+                            updated_at: '2024-01-06T21:26:22.000000Z'
+                          -
+                            id: 145
+                            user_id: 145
+                            product_id: 15
+                            status: 1
+                            comment: 'Totam rerum modi et. Enim veritatis culpa autem vitae modi. Pariatur ut consequatur sunt pariatur quas eligendi.'
+                            vote: 2
+                            created_at: '2024-01-06T21:26:22.000000Z'
+                            updated_at: '2024-01-06T21:26:22.000000Z'
+                      -
+                        id: 16
+                        provider_id: 16
+                        name: 'Darian Bechtelar'
+                        description: 'Officia nobis et est eum nesciunt et dolore. Quidem et cupiditate sed. Laborum est consequuntur voluptate. Architecto quisquam laudantium eaque optio similique quasi. Est sint sequi sed qui.'
+                        set_to_commentable_at: null
+                        set_to_votable_at: null
+                        set_to_publicly_reviewable: '1983-05-20T20:30:00.000000Z'
+                        published_at: '2011-05-21T19:30:00.000000Z'
+                        created_at: '2024-01-06T21:26:22.000000Z'
+                        updated_at: '2024-01-06T21:26:22.000000Z'
+                        total_reviews: 4
+                        reviews_with_votes_count: 3
+                        reviews_avg_vote: 2.4
+                        price: 4123240
+                        provider:
+                          id: 16
+                          name: 'Megane Purdy'
+                          created_at: '2024-01-06T21:26:19.000000Z'
+                          updated_at: '2024-01-06T21:26:19.000000Z'
+                        latest_approved_comments:
+                          -
+                            id: 151
+                            user_id: 151
+                            product_id: 16
+                            status: 1
+                            comment: 'Dignissimos velit magni magnam et rerum. Sed quo alias laudantium quam expedita. Non iste velit natus asperiores non.'
+                            vote: 3
+                            created_at: '2024-01-06T21:26:22.000000Z'
+                            updated_at: '2024-01-06T21:26:22.000000Z'
+                      -
+                        id: 17
+                        provider_id: 17
+                        name: 'Gracie Cummings'
+                        description: 'Et blanditiis error harum assumenda ducimus ut odit. Sit et eum sed sunt libero rerum sed. Numquam nesciunt placeat aut quam accusamus.'
+                        set_to_commentable_at: null
+                        set_to_votable_at: '1977-06-12T19:30:00.000000Z'
+                        set_to_publicly_reviewable: '2006-08-13T20:30:00.000000Z'
+                        published_at: '1981-04-11T20:30:00.000000Z'
+                        created_at: '2024-01-06T21:26:22.000000Z'
+                        updated_at: '2024-01-06T21:26:22.000000Z'
+                        total_reviews: 4
+                        reviews_with_votes_count: 2
+                        reviews_avg_vote: 4.4
+                        price: 970692
+                        provider:
+                          id: 17
+                          name: 'Veronica Huels Jr.'
+                          created_at: '2024-01-06T21:26:19.000000Z'
+                          updated_at: '2024-01-06T21:26:19.000000Z'
+                        latest_approved_comments:
+                          -
+                            id: 161
+                            user_id: 161
+                            product_id: 17
+                            status: 1
+                            comment: 'Rerum soluta eum libero omnis. Voluptas itaque alias voluptatem occaecati voluptatem est quaerat. Tempora culpa modi itaque hic eum vero.'
+                            vote: null
+                            created_at: '2024-01-06T21:26:22.000000Z'
+                            updated_at: '2024-01-06T21:26:22.000000Z'
+                          -
+                            id: 162
+                            user_id: 162
+                            product_id: 17
+                            status: 1
+                            comment: 'Omnis sunt eveniet impedit officiis vitae quia in. Ut eveniet numquam qui sed consequatur amet facilis. Necessitatibus et commodi sed consectetur cupiditate aut corporis animi. Aut quia sint est sed labore et quod aut.'
+                            vote: null
+                            created_at: '2024-01-06T21:26:22.000000Z'
+                            updated_at: '2024-01-06T21:26:22.000000Z'
+                          -
+                            id: 169
+                            user_id: 169
+                            product_id: 17
+                            status: 1
+                            comment: 'Quia repudiandae optio aut qui illum dolor voluptatibus. Aspernatur magni est quia aperiam nihil. Aut incidunt delectus illo molestias laborum dignissimos quis.'
+                            vote: 5
+                            created_at: '2024-01-06T21:26:22.000000Z'
+                            updated_at: '2024-01-06T21:26:22.000000Z'
+                      -
+                        id: 18
+                        provider_id: 18
+                        name: 'Elisa Friesen'
+                        description: 'Commodi dolores id voluptatem magnam. Qui corporis harum laboriosam est aut quibusdam. Fuga saepe occaecati illum quos aliquid perspiciatis cupiditate.'
+                        set_to_commentable_at: null
+                        set_to_votable_at: '1997-03-08T20:30:00.000000Z'
+                        set_to_publicly_reviewable: '2015-07-22T19:30:00.000000Z'
+                        published_at: '1972-02-10T20:30:00.000000Z'
+                        created_at: '2024-01-06T21:26:22.000000Z'
+                        updated_at: '2024-01-06T21:26:22.000000Z'
+                        total_reviews: 4
+                        reviews_with_votes_count: 1
+                        reviews_avg_vote: 2.2
+                        price: 4545562
+                        provider:
+                          id: 18
+                          name: 'Francisco Brakus'
+                          created_at: '2024-01-06T21:26:19.000000Z'
+                          updated_at: '2024-01-06T21:26:19.000000Z'
+                        latest_approved_comments:
+                          -
+                            id: 173
+                            user_id: 173
+                            product_id: 18
+                            status: 1
+                            comment: 'Molestias et et tempore harum et illo nostrum. Sed qui occaecati nihil quia reprehenderit veritatis a ducimus. Culpa culpa eos officiis consequuntur qui quae. Quas aliquam velit molestias laboriosam sed. Sed voluptas nostrum odio dolorem qui possimus.'
+                            vote: null
+                            created_at: '2024-01-06T21:26:23.000000Z'
+                            updated_at: '2024-01-06T21:26:23.000000Z'
+                          -
+                            id: 178
+                            user_id: 178
+                            product_id: 18
+                            status: 1
+                            comment: 'Consequatur quo at rerum cumque voluptatem neque quia. Aspernatur adipisci qui ad vel dicta fuga. Dolorum eveniet voluptatem ducimus. Ipsam nam libero eum.'
+                            vote: 2
+                            created_at: '2024-01-06T21:26:23.000000Z'
+                            updated_at: '2024-01-06T21:26:23.000000Z'
+                      -
+                        id: 6
+                        provider_id: 6
+                        name: 'Ms. Precious Kuvalis'
+                        description: 'Vero ullam quisquam dolorem doloremque soluta quisquam voluptatibus sed. Magni nihil quis soluta et. Quas nihil illo quis commodi quibusdam nesciunt. Suscipit voluptas et qui est.'
+                        set_to_commentable_at: '1980-01-28T20:30:00.000000Z'
+                        set_to_votable_at: '2016-06-12T19:30:00.000000Z'
+                        set_to_publicly_reviewable: '2020-02-12T20:30:00.000000Z'
+                        published_at: '2012-03-02T20:30:00.000000Z'
+                        created_at: '2024-01-06T21:26:21.000000Z'
+                        updated_at: '2024-01-06T21:26:21.000000Z'
+                        total_reviews: 4
+                        reviews_with_votes_count: 3
+                        reviews_avg_vote: 3.1111111111111
+                        price: 2031608
+                        provider:
+                          id: 6
+                          name: 'Mr. Tyrese Brown'
+                          created_at: '2024-01-06T21:26:19.000000Z'
+                          updated_at: '2024-01-06T21:26:19.000000Z'
+                        latest_approved_comments:
+                          -
+                            id: 56
+                            user_id: 56
+                            product_id: 6
+                            status: 1
+                            comment: 'Eum voluptatem voluptatem praesentium quo. Consequatur rerum temporibus est laborum pariatur quasi. Et vitae non quas libero aut sit.'
+                            vote: 4
+                            created_at: '2024-01-06T21:26:21.000000Z'
+                            updated_at: '2024-01-06T21:26:21.000000Z'
+                          -
+                            id: 57
+                            user_id: 57
+                            product_id: 6
+                            status: 1
+                            comment: 'Accusantium fugiat accusantium nam ut. Voluptatem velit deleniti qui minima eaque. Impedit molestias provident labore dolore molestiae voluptatem. Voluptatem sed earum numquam molestias illum.'
+                            vote: null
+                            created_at: '2024-01-06T21:26:21.000000Z'
+                            updated_at: '2024-01-06T21:26:21.000000Z'
+                      -
+                        id: 7
+                        provider_id: 7
+                        name: 'Dr. Orland Effertz'
+                        description: 'Vero non ipsa quidem itaque. Voluptas facilis ea pariatur totam tempora necessitatibus. Molestias voluptatibus commodi ex soluta. Iure architecto dignissimos aperiam omnis eveniet cum.'
+                        set_to_commentable_at: '2018-12-10T20:30:00.000000Z'
+                        set_to_votable_at: '2015-07-04T19:30:00.000000Z'
+                        set_to_publicly_reviewable: null
+                        published_at: '2022-05-06T19:30:00.000000Z'
+                        created_at: '2024-01-06T21:26:21.000000Z'
+                        updated_at: '2024-01-06T21:26:21.000000Z'
+                        total_reviews: 2
+                        reviews_with_votes_count: 2
+                        reviews_avg_vote: 4
+                        price: 9281117
+                        provider:
+                          id: 7
+                          name: 'Prof. Kory Bins DDS'
+                          created_at: '2024-01-06T21:26:19.000000Z'
+                          updated_at: '2024-01-06T21:26:19.000000Z'
+                        latest_approved_comments:
+                          -
+                            id: 69
+                            user_id: 69
+                            product_id: 7
+                            status: 1
+                            comment: 'Hic odit eligendi adipisci est aspernatur tenetur vero. Repellendus omnis alias et vel sint.'
+                            vote: 4
+                            created_at: '2024-01-06T21:26:21.000000Z'
+                            updated_at: '2024-01-06T21:26:21.000000Z'
+                    first_page_url: 'http://127.0.0.1:8000/api/products?page=1'
+                    from: 1
+                    last_page: 2
+                    last_page_url: 'http://127.0.0.1:8000/api/products?page=2'
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/products?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: 'http://127.0.0.1:8000/api/products?page=2'
+                        label: '2'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/products?page=2'
+                        label: 'Next &raquo;'
+                        active: false
+                    next_page_url: 'http://127.0.0.1:8000/api/products?page=2'
+                    path: 'http://127.0.0.1:8000/api/products'
+                    per_page: 20
+                    prev_page_url: null
+                    to: 20
+                    total: 26
+                properties:
+                  products:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      data:
+                        type: array
+                        example:
+                          -
+                            id: 47
+                            provider_id: 47
+                            name: 'Ebba Osinski'
+                            description: 'Molestiae aut iusto et odit quia iusto quisquam. Qui explicabo quis incidunt. Est molestiae commodi illo praesentium vel possimus.'
+                            set_to_commentable_at: null
+                            set_to_votable_at: null
+                            set_to_publicly_reviewable: null
+                            published_at: '1984-04-19T20:30:00.000000Z'
+                            created_at: '2024-01-06T21:26:27.000000Z'
+                            updated_at: '2024-01-06T21:26:27.000000Z'
+                            total_reviews: 4
+                            reviews_with_votes_count: 3
+                            reviews_avg_vote: 2.3333333333333
+                            price: 5612637
+                            provider:
+                              id: 47
+                              name: 'Gabrielle Moore'
+                              created_at: '2024-01-06T21:26:20.000000Z'
+                              updated_at: '2024-01-06T21:26:20.000000Z'
+                            latest_approved_comments:
+                              -
+                                id: 464
+                                user_id: 464
+                                product_id: 47
+                                status: 1
+                                comment: 'Nisi minus beatae non ipsa minima quae ut. Pariatur velit quia illum aut. Unde molestias ratione excepturi doloremque iure.'
+                                vote: null
+                                created_at: '2024-01-06T21:26:27.000000Z'
+                                updated_at: '2024-01-06T21:26:27.000000Z'
+                              -
+                                id: 470
+                                user_id: 470
+                                product_id: 47
+                                status: 1
+                                comment: 'Impedit quia doloremque aut assumenda deleniti et. Et eligendi et sint placeat voluptas ullam tempora. Ipsum fugiat voluptatem vel ut.'
+                                vote: 2
+                                created_at: '2024-01-06T21:26:27.000000Z'
+                                updated_at: '2024-01-06T21:26:27.000000Z'
+                          -
+                            id: 49
+                            provider_id: 49
+                            name: 'Miss Sincere Bosco PhD'
+                            description: 'Dolor eos laboriosam et fugiat. Amet provident magnam et. Autem sequi nesciunt perspiciatis excepturi.'
+                            set_to_commentable_at: null
+                            set_to_votable_at: null
+                            set_to_publicly_reviewable: '2023-09-12T20:30:00.000000Z'
+                            published_at: '1977-07-02T19:30:00.000000Z'
+                            created_at: '2024-01-06T21:26:27.000000Z'
+                            updated_at: '2024-01-06T21:26:27.000000Z'
+                            total_reviews: 2
+                            reviews_with_votes_count: 1
+                            reviews_avg_vote: 2.2
+                            price: 2753340
+                            provider:
+                              id: 49
+                              name: 'Caitlyn Kutch'
+                              created_at: '2024-01-06T21:26:20.000000Z'
+                              updated_at: '2024-01-06T21:26:20.000000Z'
+                            latest_approved_comments: []
+                          -
+                            id: 40
+                            provider_id: 40
+                            name: 'Angela Bernhard'
+                            description: 'Ipsam ad quia eaque repudiandae voluptatem eos voluptates. Itaque ut qui nostrum voluptatum distinctio a occaecati. Dolores facere architecto dolor accusantium consequuntur voluptatibus.'
+                            set_to_commentable_at: null
+                            set_to_votable_at: '1996-01-21T20:30:00.000000Z'
+                            set_to_publicly_reviewable: null
+                            published_at: '1997-11-06T20:30:00.000000Z'
+                            created_at: '2024-01-06T21:26:26.000000Z'
+                            updated_at: '2024-01-06T21:26:26.000000Z'
+                            total_reviews: 4
+                            reviews_with_votes_count: 3
+                            reviews_avg_vote: 2.5
+                            price: 5342511
+                            provider:
+                              id: 40
+                              name: 'Greg Bergnaum III'
+                              created_at: '2024-01-06T21:26:20.000000Z'
+                              updated_at: '2024-01-06T21:26:20.000000Z'
+                            latest_approved_comments:
+                              -
+                                id: 396
+                                user_id: 396
+                                product_id: 40
+                                status: 1
+                                comment: 'Et qui cumque velit magnam et aliquid nisi. Odit qui facilis eum quisquam sint. Sunt hic labore iste dolorum ea necessitatibus sunt.'
+                                vote: 2
+                                created_at: '2024-01-06T21:26:26.000000Z'
+                                updated_at: '2024-01-06T21:26:26.000000Z'
+                              -
+                                id: 400
+                                user_id: 400
+                                product_id: 40
+                                status: 1
+                                comment: 'Asperiores cupiditate illo libero modi aut vel vel rerum. Consequatur dolor qui repellendus beatae deserunt et. Quia amet omnis quo nisi voluptas doloribus. Voluptatem beatae in et illum qui eum fuga.'
+                                vote: 2
+                                created_at: '2024-01-06T21:26:26.000000Z'
+                                updated_at: '2024-01-06T21:26:26.000000Z'
+                          -
+                            id: 41
+                            provider_id: 41
+                            name: 'Sam Schuster'
+                            description: 'Veritatis nisi distinctio neque rerum quisquam. Molestiae sit cumque eligendi voluptates possimus laborum asperiores quasi. Delectus laudantium omnis error dolores ut velit qui. Provident ullam molestias dignissimos odit.'
+                            set_to_commentable_at: null
+                            set_to_votable_at: null
+                            set_to_publicly_reviewable: '1980-05-02T19:30:00.000000Z'
+                            published_at: '2016-01-16T20:30:00.000000Z'
+                            created_at: '2024-01-06T21:26:26.000000Z'
+                            updated_at: '2024-01-06T21:26:26.000000Z'
+                            total_reviews: 2
+                            reviews_with_votes_count: 0
+                            reviews_avg_vote: 2.8
+                            price: 6674469
+                            provider:
+                              id: 41
+                              name: 'Werner Jacobson'
+                              created_at: '2024-01-06T21:26:20.000000Z'
+                              updated_at: '2024-01-06T21:26:20.000000Z'
+                            latest_approved_comments: []
+                          -
+                            id: 43
+                            provider_id: 43
+                            name: 'Ashly Terry'
+                            description: 'Magni et voluptas enim ea. Asperiores inventore dicta est omnis beatae aut rem a. Consequuntur voluptas vel ducimus. Tempora quia aut at eligendi rerum.'
+                            set_to_commentable_at: null
+                            set_to_votable_at: '1970-03-16T20:30:00.000000Z'
+                            set_to_publicly_reviewable: null
+                            published_at: '2015-07-27T19:30:00.000000Z'
+                            created_at: '2024-01-06T21:26:26.000000Z'
+                            updated_at: '2024-01-06T21:26:26.000000Z'
+                            total_reviews: 1
+                            reviews_with_votes_count: 1
+                            reviews_avg_vote: 3.1111111111111
+                            price: 9246771
+                            provider:
+                              id: 43
+                              name: 'Mayra Johns'
+                              created_at: '2024-01-06T21:26:20.000000Z'
+                              updated_at: '2024-01-06T21:26:20.000000Z'
+                            latest_approved_comments: []
+                          -
+                            id: 44
+                            provider_id: 44
+                            name: 'Joy Eichmann'
+                            description: 'Veritatis vitae dolor consequatur veritatis. Ipsum eius incidunt quod labore consequatur vero. Asperiores atque recusandae dolor praesentium commodi. Voluptate nihil distinctio excepturi et enim placeat.'
+                            set_to_commentable_at: '1992-12-09T20:30:00.000000Z'
+                            set_to_votable_at: '2017-11-10T20:30:00.000000Z'
+                            set_to_publicly_reviewable: '2004-10-08T20:30:00.000000Z'
+                            published_at: '1992-12-23T20:30:00.000000Z'
+                            created_at: '2024-01-06T21:26:26.000000Z'
+                            updated_at: '2024-01-06T21:26:26.000000Z'
+                            total_reviews: 6
+                            reviews_with_votes_count: 5
+                            reviews_avg_vote: 2.875
+                            price: 9387390
+                            provider:
+                              id: 44
+                              name: 'Grayson Corwin PhD'
+                              created_at: '2024-01-06T21:26:20.000000Z'
+                              updated_at: '2024-01-06T21:26:20.000000Z'
+                            latest_approved_comments:
+                              -
+                                id: 436
+                                user_id: 436
+                                product_id: 44
+                                status: 1
+                                comment: 'A doloribus a tempora aut temporibus. Dolorem rerum fugiat molestiae. Beatae labore iusto nemo neque. Repudiandae fugiat eligendi ducimus sapiente.'
+                                vote: 1
+                                created_at: '2024-01-06T21:26:27.000000Z'
+                                updated_at: '2024-01-06T21:26:27.000000Z'
+                              -
+                                id: 440
+                                user_id: 440
+                                product_id: 44
+                                status: 1
+                                comment: 'Facilis aperiam qui at fuga ad blanditiis quaerat. Asperiores atque et perspiciatis sed. Blanditiis odio earum ut quis qui. Iure animi ut occaecati blanditiis. Voluptatibus quibusdam commodi esse est vel nulla laboriosam.'
+                                vote: 3
+                                created_at: '2024-01-06T21:26:27.000000Z'
+                                updated_at: '2024-01-06T21:26:27.000000Z'
+                              -
+                                id: 431
+                                user_id: 431
+                                product_id: 44
+                                status: 1
+                                comment: 'Quasi officia possimus at dolorum. Magni beatae et soluta non. Quia quaerat natus iure qui non explicabo libero.'
+                                vote: null
+                                created_at: '2024-01-06T21:26:26.000000Z'
+                                updated_at: '2024-01-06T21:26:26.000000Z'
+                          -
+                            id: 32
+                            provider_id: 32
+                            name: 'Oren Dooley'
+                            description: 'Aut molestiae explicabo impedit dolorem tempora repellat amet. Officiis voluptas consequuntur ut cum dicta esse. Aut delectus odio nesciunt ea laboriosam praesentium.'
+                            set_to_commentable_at: null
+                            set_to_votable_at: null
+                            set_to_publicly_reviewable: '1991-10-27T20:30:00.000000Z'
+                            published_at: '1987-07-18T20:30:00.000000Z'
+                            created_at: '2024-01-06T21:26:25.000000Z'
+                            updated_at: '2024-01-06T21:26:25.000000Z'
+                            total_reviews: 3
+                            reviews_with_votes_count: 2
+                            reviews_avg_vote: 2.1428571428571
+                            price: 9619027
+                            provider:
+                              id: 32
+                              name: 'Orie Sanford'
+                              created_at: '2024-01-06T21:26:20.000000Z'
+                              updated_at: '2024-01-06T21:26:20.000000Z'
+                            latest_approved_comments: []
+                          -
+                            id: 25
+                            provider_id: 25
+                            name: 'Magnolia Mraz'
+                            description: 'Numquam repellendus pariatur aut libero quia mollitia. Eveniet commodi corporis eos asperiores quasi et eos. Voluptatibus praesentium asperiores labore qui. Enim accusantium pariatur modi est qui expedita ut voluptas. Necessitatibus omnis culpa facere voluptatem in.'
+                            set_to_commentable_at: null
+                            set_to_votable_at: null
+                            set_to_publicly_reviewable: '2011-10-31T20:30:00.000000Z'
+                            published_at: '2020-01-31T20:30:00.000000Z'
+                            created_at: '2024-01-06T21:26:24.000000Z'
+                            updated_at: '2024-01-06T21:26:24.000000Z'
+                            total_reviews: 2
+                            reviews_with_votes_count: 0
+                            reviews_avg_vote: 3.3333333333333
+                            price: 5790328
+                            provider:
+                              id: 25
+                              name: 'Leopoldo Dicki'
+                              created_at: '2024-01-06T21:26:19.000000Z'
+                              updated_at: '2024-01-06T21:26:19.000000Z'
+                            latest_approved_comments:
+                              -
+                                id: 247
+                                user_id: 247
+                                product_id: 25
+                                status: 1
+                                comment: 'Qui rem voluptatum reiciendis cupiditate in autem est. Magni sed qui aut itaque dignissimos pariatur. Omnis perferendis cumque incidunt esse ipsam quos deserunt. Blanditiis omnis omnis magni et nihil. Accusantium error quod voluptatum et.'
+                                vote: null
+                                created_at: '2024-01-06T21:26:24.000000Z'
+                                updated_at: '2024-01-06T21:26:24.000000Z'
+                          -
+                            id: 26
+                            provider_id: 26
+                            name: 'Dr. Hyman Schuster V'
+                            description: 'Quis iure voluptatibus dolor accusamus. Non possimus quo perferendis expedita eos id libero. Eveniet minima incidunt iste rerum consequatur sed dolores.'
+                            set_to_commentable_at: null
+                            set_to_votable_at: '1979-05-19T20:30:00.000000Z'
+                            set_to_publicly_reviewable: null
+                            published_at: '1982-03-21T20:30:00.000000Z'
+                            created_at: '2024-01-06T21:26:24.000000Z'
+                            updated_at: '2024-01-06T21:26:24.000000Z'
+                            total_reviews: 7
+                            reviews_with_votes_count: 2
+                            reviews_avg_vote: 1.6666666666667
+                            price: 6711373
+                            provider:
+                              id: 26
+                              name: 'Dr. Belle Ortiz'
+                              created_at: '2024-01-06T21:26:19.000000Z'
+                              updated_at: '2024-01-06T21:26:19.000000Z'
+                            latest_approved_comments:
+                              -
+                                id: 252
+                                user_id: 252
+                                product_id: 26
+                                status: 1
+                                comment: 'Laudantium et eius vel consequatur dolore optio deleniti quidem. Quidem corrupti numquam velit tenetur similique. Quo deleniti harum dolorem nulla quis. Aut quod et ea cupiditate. Eaque velit cum voluptas placeat.'
+                                vote: null
+                                created_at: '2024-01-06T21:26:24.000000Z'
+                                updated_at: '2024-01-06T21:26:24.000000Z'
+                              -
+                                id: 256
+                                user_id: 256
+                                product_id: 26
+                                status: 1
+                                comment: 'At eveniet dolores est molestiae corrupti voluptas. Reiciendis sed corporis animi eum quis cum unde possimus. Laboriosam aut ipsam magni.'
+                                vote: null
+                                created_at: '2024-01-06T21:26:24.000000Z'
+                                updated_at: '2024-01-06T21:26:24.000000Z'
+                              -
+                                id: 258
+                                user_id: 258
+                                product_id: 26
+                                status: 1
+                                comment: 'Libero neque necessitatibus et incidunt expedita laudantium. Impedit illo autem illum consequatur deserunt. Ut voluptatem saepe numquam consequuntur. Quod animi necessitatibus pariatur consectetur.'
+                                vote: null
+                                created_at: '2024-01-06T21:26:24.000000Z'
+                                updated_at: '2024-01-06T21:26:24.000000Z'
+                          -
+                            id: 29
+                            provider_id: 29
+                            name: "Valentin O'Connell"
+                            description: 'Et temporibus autem dolorum. Mollitia ratione incidunt deserunt et. Repellat sit amet atque sequi architecto corrupti.'
+                            set_to_commentable_at: '1972-11-10T20:30:00.000000Z'
+                            set_to_votable_at: '1987-09-24T20:30:00.000000Z'
+                            set_to_publicly_reviewable: null
+                            published_at: '1978-10-28T20:00:00.000000Z'
+                            created_at: '2024-01-06T21:26:24.000000Z'
+                            updated_at: '2024-01-06T21:26:24.000000Z'
+                            total_reviews: 6
+                            reviews_with_votes_count: 2
+                            reviews_avg_vote: 2.5
+                            price: 643727
+                            provider:
+                              id: 29
+                              name: 'Prof. Hazle Konopelski DDS'
+                              created_at: '2024-01-06T21:26:19.000000Z'
+                              updated_at: '2024-01-06T21:26:19.000000Z'
+                            latest_approved_comments:
+                              -
+                                id: 281
+                                user_id: 281
+                                product_id: 29
+                                status: 1
+                                comment: 'Veniam placeat soluta in dignissimos enim. Eos dolor voluptatibus aliquid porro. Velit eum placeat repellendus sit ipsam. Iure quod odio architecto.'
+                                vote: 3
+                                created_at: '2024-01-06T21:26:24.000000Z'
+                                updated_at: '2024-01-06T21:26:24.000000Z'
+                              -
+                                id: 282
+                                user_id: 282
+                                product_id: 29
+                                status: 1
+                                comment: 'Quia dolore et sed consequuntur. Quis omnis deserunt laudantium omnis aut. Soluta quis quis hic et veniam.'
+                                vote: null
+                                created_at: '2024-01-06T21:26:24.000000Z'
+                                updated_at: '2024-01-06T21:26:24.000000Z'
+                              -
+                                id: 283
+                                user_id: 283
+                                product_id: 29
+                                status: 1
+                                comment: 'Est itaque et neque blanditiis assumenda ullam. Qui necessitatibus nostrum et dolores voluptatibus est totam nesciunt. Illo aspernatur quia tempore adipisci consectetur nostrum. Architecto qui nesciunt eos reiciendis.'
+                                vote: null
+                                created_at: '2024-01-06T21:26:24.000000Z'
+                                updated_at: '2024-01-06T21:26:24.000000Z'
+                          -
+                            id: 19
+                            provider_id: 19
+                            name: 'Uriah Tromp I'
+                            description: 'Perferendis nemo sunt sit nihil iure. Voluptatem error ut dolorem maxime voluptate qui. Corporis iste error aperiam sit illum illum.'
+                            set_to_commentable_at: '1978-04-18T19:00:00.000000Z'
+                            set_to_votable_at: '1978-12-26T20:00:00.000000Z'
+                            set_to_publicly_reviewable: null
+                            published_at: '2014-03-27T19:30:00.000000Z'
+                            created_at: '2024-01-06T21:26:23.000000Z'
+                            updated_at: '2024-01-06T21:26:23.000000Z'
+                            total_reviews: 3
+                            reviews_with_votes_count: 2
+                            reviews_avg_vote: 4.25
+                            price: 4297195
+                            provider:
+                              id: 19
+                              name: 'Abdiel Kshlerin DDS'
+                              created_at: '2024-01-06T21:26:19.000000Z'
+                              updated_at: '2024-01-06T21:26:19.000000Z'
+                            latest_approved_comments:
+                              -
+                                id: 181
+                                user_id: 181
+                                product_id: 19
+                                status: 1
+                                comment: 'Quod ut eum et rem reiciendis voluptates. Labore ipsam beatae sunt asperiores reiciendis consequatur fugit. Voluptate illum commodi libero.'
+                                vote: 5
+                                created_at: '2024-01-06T21:26:23.000000Z'
+                                updated_at: '2024-01-06T21:26:23.000000Z'
+                              -
+                                id: 185
+                                user_id: 185
+                                product_id: 19
+                                status: 1
+                                comment: 'Et id laboriosam nihil consectetur. Cum molestias qui eligendi nam. Sed necessitatibus quibusdam repudiandae tenetur. Qui laboriosam quos rerum deserunt sunt.'
+                                vote: 4
+                                created_at: '2024-01-06T21:26:23.000000Z'
+                                updated_at: '2024-01-06T21:26:23.000000Z'
+                          -
+                            id: 24
+                            provider_id: 24
+                            name: 'Sigmund Moore'
+                            description: 'Cum itaque natus aut natus reiciendis delectus. Vero repellendus omnis provident voluptas quia. Placeat eveniet necessitatibus libero quia exercitationem.'
+                            set_to_commentable_at: null
+                            set_to_votable_at: '1992-12-03T20:30:00.000000Z'
+                            set_to_publicly_reviewable: null
+                            published_at: '1989-08-19T20:30:00.000000Z'
+                            created_at: '2024-01-06T21:26:23.000000Z'
+                            updated_at: '2024-01-06T21:26:23.000000Z'
+                            total_reviews: 5
+                            reviews_with_votes_count: 3
+                            reviews_avg_vote: 3.6666666666667
+                            price: 6360242
+                            provider:
+                              id: 24
+                              name: 'Alanna Pollich'
+                              created_at: '2024-01-06T21:26:19.000000Z'
+                              updated_at: '2024-01-06T21:26:19.000000Z'
+                            latest_approved_comments:
+                              -
+                                id: 231
+                                user_id: 231
+                                product_id: 24
+                                status: 1
+                                comment: 'Explicabo architecto accusamus saepe dolor officia. Qui non repellat rerum est magni tempore voluptates eaque. Culpa repellendus aliquam dolor. Quo minus molestiae quia sunt sit nobis.'
+                                vote: null
+                                created_at: '2024-01-06T21:26:23.000000Z'
+                                updated_at: '2024-01-06T21:26:23.000000Z'
+                          -
+                            id: 12
+                            provider_id: 12
+                            name: 'Ms. Albina Simonis'
+                            description: 'Amet nostrum quia velit aut et voluptas. Qui iusto esse enim sunt magni et. Minima dolore necessitatibus voluptatibus in rem.'
+                            set_to_commentable_at: '1975-05-15T20:30:00.000000Z'
+                            set_to_votable_at: null
+                            set_to_publicly_reviewable: null
+                            published_at: '1977-08-22T19:30:00.000000Z'
+                            created_at: '2024-01-06T21:26:22.000000Z'
+                            updated_at: '2024-01-06T21:26:22.000000Z'
+                            total_reviews: 4
+                            reviews_with_votes_count: 3
+                            reviews_avg_vote: 3
+                            price: 6394872
+                            provider:
+                              id: 12
+                              name: 'Madeline Kohler I'
+                              created_at: '2024-01-06T21:26:19.000000Z'
+                              updated_at: '2024-01-06T21:26:19.000000Z'
+                            latest_approved_comments: []
+                          -
+                            id: 13
+                            provider_id: 13
+                            name: 'Johnnie Hand'
+                            description: 'Autem nihil a doloremque. Similique vitae laudantium eum molestiae aspernatur pariatur. Esse minima ea est vel odio nobis odio. Fugiat veniam dolorem iusto expedita dolor.'
+                            set_to_commentable_at: null
+                            set_to_votable_at: null
+                            set_to_publicly_reviewable: '1970-08-05T20:30:00.000000Z'
+                            published_at: '1991-01-26T20:30:00.000000Z'
+                            created_at: '2024-01-06T21:26:22.000000Z'
+                            updated_at: '2024-01-06T21:26:22.000000Z'
+                            total_reviews: 5
+                            reviews_with_votes_count: 1
+                            reviews_avg_vote: 3
+                            price: 9024450
+                            provider:
+                              id: 13
+                              name: 'Prof. Mitchell Jerde'
+                              created_at: '2024-01-06T21:26:19.000000Z'
+                              updated_at: '2024-01-06T21:26:19.000000Z'
+                            latest_approved_comments: []
+                          -
+                            id: 15
+                            provider_id: 15
+                            name: 'Gage Greenholt MD'
+                            description: 'Quos autem voluptatibus architecto velit. Et modi totam inventore dignissimos sit id reiciendis. Voluptate tempora nam ipsam atque necessitatibus beatae. Architecto aspernatur fugiat quia nihil animi repellendus.'
+                            set_to_commentable_at: '2022-07-08T19:30:00.000000Z'
+                            set_to_votable_at: '1992-10-24T20:30:00.000000Z'
+                            set_to_publicly_reviewable: null
+                            published_at: '1972-12-11T20:30:00.000000Z'
+                            created_at: '2024-01-06T21:26:22.000000Z'
+                            updated_at: '2024-01-06T21:26:22.000000Z'
+                            total_reviews: 4
+                            reviews_with_votes_count: 3
+                            reviews_avg_vote: 2.875
+                            price: 460308
+                            provider:
+                              id: 15
+                              name: 'Earnest Ledner'
+                              created_at: '2024-01-06T21:26:19.000000Z'
+                              updated_at: '2024-01-06T21:26:19.000000Z'
+                            latest_approved_comments:
+                              -
+                                id: 142
+                                user_id: 142
+                                product_id: 15
+                                status: 1
+                                comment: 'Minima sunt labore molestiae cupiditate dolorem voluptas. Hic aut sapiente et. Quae facilis ad velit aliquam. Debitis id ipsum unde animi.'
+                                vote: 3
+                                created_at: '2024-01-06T21:26:22.000000Z'
+                                updated_at: '2024-01-06T21:26:22.000000Z'
+                              -
+                                id: 143
+                                user_id: 143
+                                product_id: 15
+                                status: 1
+                                comment: 'Nihil et similique occaecati qui consequatur. Fugiat sed ut aut debitis minus quibusdam ut nihil. Sint laboriosam quis omnis. Itaque sunt dignissimos numquam.'
+                                vote: null
+                                created_at: '2024-01-06T21:26:22.000000Z'
+                                updated_at: '2024-01-06T21:26:22.000000Z'
+                              -
+                                id: 145
+                                user_id: 145
+                                product_id: 15
+                                status: 1
+                                comment: 'Totam rerum modi et. Enim veritatis culpa autem vitae modi. Pariatur ut consequatur sunt pariatur quas eligendi.'
+                                vote: 2
+                                created_at: '2024-01-06T21:26:22.000000Z'
+                                updated_at: '2024-01-06T21:26:22.000000Z'
+                          -
+                            id: 16
+                            provider_id: 16
+                            name: 'Darian Bechtelar'
+                            description: 'Officia nobis et est eum nesciunt et dolore. Quidem et cupiditate sed. Laborum est consequuntur voluptate. Architecto quisquam laudantium eaque optio similique quasi. Est sint sequi sed qui.'
+                            set_to_commentable_at: null
+                            set_to_votable_at: null
+                            set_to_publicly_reviewable: '1983-05-20T20:30:00.000000Z'
+                            published_at: '2011-05-21T19:30:00.000000Z'
+                            created_at: '2024-01-06T21:26:22.000000Z'
+                            updated_at: '2024-01-06T21:26:22.000000Z'
+                            total_reviews: 4
+                            reviews_with_votes_count: 3
+                            reviews_avg_vote: 2.4
+                            price: 4123240
+                            provider:
+                              id: 16
+                              name: 'Megane Purdy'
+                              created_at: '2024-01-06T21:26:19.000000Z'
+                              updated_at: '2024-01-06T21:26:19.000000Z'
+                            latest_approved_comments:
+                              -
+                                id: 151
+                                user_id: 151
+                                product_id: 16
+                                status: 1
+                                comment: 'Dignissimos velit magni magnam et rerum. Sed quo alias laudantium quam expedita. Non iste velit natus asperiores non.'
+                                vote: 3
+                                created_at: '2024-01-06T21:26:22.000000Z'
+                                updated_at: '2024-01-06T21:26:22.000000Z'
+                          -
+                            id: 17
+                            provider_id: 17
+                            name: 'Gracie Cummings'
+                            description: 'Et blanditiis error harum assumenda ducimus ut odit. Sit et eum sed sunt libero rerum sed. Numquam nesciunt placeat aut quam accusamus.'
+                            set_to_commentable_at: null
+                            set_to_votable_at: '1977-06-12T19:30:00.000000Z'
+                            set_to_publicly_reviewable: '2006-08-13T20:30:00.000000Z'
+                            published_at: '1981-04-11T20:30:00.000000Z'
+                            created_at: '2024-01-06T21:26:22.000000Z'
+                            updated_at: '2024-01-06T21:26:22.000000Z'
+                            total_reviews: 4
+                            reviews_with_votes_count: 2
+                            reviews_avg_vote: 4.4
+                            price: 970692
+                            provider:
+                              id: 17
+                              name: 'Veronica Huels Jr.'
+                              created_at: '2024-01-06T21:26:19.000000Z'
+                              updated_at: '2024-01-06T21:26:19.000000Z'
+                            latest_approved_comments:
+                              -
+                                id: 161
+                                user_id: 161
+                                product_id: 17
+                                status: 1
+                                comment: 'Rerum soluta eum libero omnis. Voluptas itaque alias voluptatem occaecati voluptatem est quaerat. Tempora culpa modi itaque hic eum vero.'
+                                vote: null
+                                created_at: '2024-01-06T21:26:22.000000Z'
+                                updated_at: '2024-01-06T21:26:22.000000Z'
+                              -
+                                id: 162
+                                user_id: 162
+                                product_id: 17
+                                status: 1
+                                comment: 'Omnis sunt eveniet impedit officiis vitae quia in. Ut eveniet numquam qui sed consequatur amet facilis. Necessitatibus et commodi sed consectetur cupiditate aut corporis animi. Aut quia sint est sed labore et quod aut.'
+                                vote: null
+                                created_at: '2024-01-06T21:26:22.000000Z'
+                                updated_at: '2024-01-06T21:26:22.000000Z'
+                              -
+                                id: 169
+                                user_id: 169
+                                product_id: 17
+                                status: 1
+                                comment: 'Quia repudiandae optio aut qui illum dolor voluptatibus. Aspernatur magni est quia aperiam nihil. Aut incidunt delectus illo molestias laborum dignissimos quis.'
+                                vote: 5
+                                created_at: '2024-01-06T21:26:22.000000Z'
+                                updated_at: '2024-01-06T21:26:22.000000Z'
+                          -
+                            id: 18
+                            provider_id: 18
+                            name: 'Elisa Friesen'
+                            description: 'Commodi dolores id voluptatem magnam. Qui corporis harum laboriosam est aut quibusdam. Fuga saepe occaecati illum quos aliquid perspiciatis cupiditate.'
+                            set_to_commentable_at: null
+                            set_to_votable_at: '1997-03-08T20:30:00.000000Z'
+                            set_to_publicly_reviewable: '2015-07-22T19:30:00.000000Z'
+                            published_at: '1972-02-10T20:30:00.000000Z'
+                            created_at: '2024-01-06T21:26:22.000000Z'
+                            updated_at: '2024-01-06T21:26:22.000000Z'
+                            total_reviews: 4
+                            reviews_with_votes_count: 1
+                            reviews_avg_vote: 2.2
+                            price: 4545562
+                            provider:
+                              id: 18
+                              name: 'Francisco Brakus'
+                              created_at: '2024-01-06T21:26:19.000000Z'
+                              updated_at: '2024-01-06T21:26:19.000000Z'
+                            latest_approved_comments:
+                              -
+                                id: 173
+                                user_id: 173
+                                product_id: 18
+                                status: 1
+                                comment: 'Molestias et et tempore harum et illo nostrum. Sed qui occaecati nihil quia reprehenderit veritatis a ducimus. Culpa culpa eos officiis consequuntur qui quae. Quas aliquam velit molestias laboriosam sed. Sed voluptas nostrum odio dolorem qui possimus.'
+                                vote: null
+                                created_at: '2024-01-06T21:26:23.000000Z'
+                                updated_at: '2024-01-06T21:26:23.000000Z'
+                              -
+                                id: 178
+                                user_id: 178
+                                product_id: 18
+                                status: 1
+                                comment: 'Consequatur quo at rerum cumque voluptatem neque quia. Aspernatur adipisci qui ad vel dicta fuga. Dolorum eveniet voluptatem ducimus. Ipsam nam libero eum.'
+                                vote: 2
+                                created_at: '2024-01-06T21:26:23.000000Z'
+                                updated_at: '2024-01-06T21:26:23.000000Z'
+                          -
+                            id: 6
+                            provider_id: 6
+                            name: 'Ms. Precious Kuvalis'
+                            description: 'Vero ullam quisquam dolorem doloremque soluta quisquam voluptatibus sed. Magni nihil quis soluta et. Quas nihil illo quis commodi quibusdam nesciunt. Suscipit voluptas et qui est.'
+                            set_to_commentable_at: '1980-01-28T20:30:00.000000Z'
+                            set_to_votable_at: '2016-06-12T19:30:00.000000Z'
+                            set_to_publicly_reviewable: '2020-02-12T20:30:00.000000Z'
+                            published_at: '2012-03-02T20:30:00.000000Z'
+                            created_at: '2024-01-06T21:26:21.000000Z'
+                            updated_at: '2024-01-06T21:26:21.000000Z'
+                            total_reviews: 4
+                            reviews_with_votes_count: 3
+                            reviews_avg_vote: 3.1111111111111
+                            price: 2031608
+                            provider:
+                              id: 6
+                              name: 'Mr. Tyrese Brown'
+                              created_at: '2024-01-06T21:26:19.000000Z'
+                              updated_at: '2024-01-06T21:26:19.000000Z'
+                            latest_approved_comments:
+                              -
+                                id: 56
+                                user_id: 56
+                                product_id: 6
+                                status: 1
+                                comment: 'Eum voluptatem voluptatem praesentium quo. Consequatur rerum temporibus est laborum pariatur quasi. Et vitae non quas libero aut sit.'
+                                vote: 4
+                                created_at: '2024-01-06T21:26:21.000000Z'
+                                updated_at: '2024-01-06T21:26:21.000000Z'
+                              -
+                                id: 57
+                                user_id: 57
+                                product_id: 6
+                                status: 1
+                                comment: 'Accusantium fugiat accusantium nam ut. Voluptatem velit deleniti qui minima eaque. Impedit molestias provident labore dolore molestiae voluptatem. Voluptatem sed earum numquam molestias illum.'
+                                vote: null
+                                created_at: '2024-01-06T21:26:21.000000Z'
+                                updated_at: '2024-01-06T21:26:21.000000Z'
+                          -
+                            id: 7
+                            provider_id: 7
+                            name: 'Dr. Orland Effertz'
+                            description: 'Vero non ipsa quidem itaque. Voluptas facilis ea pariatur totam tempora necessitatibus. Molestias voluptatibus commodi ex soluta. Iure architecto dignissimos aperiam omnis eveniet cum.'
+                            set_to_commentable_at: '2018-12-10T20:30:00.000000Z'
+                            set_to_votable_at: '2015-07-04T19:30:00.000000Z'
+                            set_to_publicly_reviewable: null
+                            published_at: '2022-05-06T19:30:00.000000Z'
+                            created_at: '2024-01-06T21:26:21.000000Z'
+                            updated_at: '2024-01-06T21:26:21.000000Z'
+                            total_reviews: 2
+                            reviews_with_votes_count: 2
+                            reviews_avg_vote: 4
+                            price: 9281117
+                            provider:
+                              id: 7
+                              name: 'Prof. Kory Bins DDS'
+                              created_at: '2024-01-06T21:26:19.000000Z'
+                              updated_at: '2024-01-06T21:26:19.000000Z'
+                            latest_approved_comments:
+                              -
+                                id: 69
+                                user_id: 69
+                                product_id: 7
+                                status: 1
+                                comment: 'Hic odit eligendi adipisci est aspernatur tenetur vero. Repellendus omnis alias et vel sint.'
+                                vote: 4
+                                created_at: '2024-01-06T21:26:21.000000Z'
+                                updated_at: '2024-01-06T21:26:21.000000Z'
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 47
+                            provider_id:
+                              type: integer
+                              example: 47
+                            name:
+                              type: string
+                              example: 'Ebba Osinski'
+                            description:
+                              type: string
+                              example: 'Molestiae aut iusto et odit quia iusto quisquam. Qui explicabo quis incidunt. Est molestiae commodi illo praesentium vel possimus.'
+                            set_to_commentable_at:
+                              type: string
+                              example: null
+                            set_to_votable_at:
+                              type: string
+                              example: null
+                            set_to_publicly_reviewable:
+                              type: string
+                              example: null
+                            published_at:
+                              type: string
+                              example: '1984-04-19T20:30:00.000000Z'
+                            created_at:
+                              type: string
+                              example: '2024-01-06T21:26:27.000000Z'
+                            updated_at:
+                              type: string
+                              example: '2024-01-06T21:26:27.000000Z'
+                            total_reviews:
+                              type: integer
+                              example: 4
+                            reviews_with_votes_count:
+                              type: integer
+                              example: 3
+                            reviews_avg_vote:
+                              type: number
+                              example: 2.3333333333333
+                            price:
+                              type: integer
+                              example: 5612637
+                            provider:
+                              type: object
+                              properties:
+                                id:
+                                  type: integer
+                                  example: 47
+                                name:
+                                  type: string
+                                  example: 'Gabrielle Moore'
+                                created_at:
+                                  type: string
+                                  example: '2024-01-06T21:26:20.000000Z'
+                                updated_at:
+                                  type: string
+                                  example: '2024-01-06T21:26:20.000000Z'
+                            latest_approved_comments:
+                              type: array
+                              example:
+                                -
+                                  id: 464
+                                  user_id: 464
+                                  product_id: 47
+                                  status: 1
+                                  comment: 'Nisi minus beatae non ipsa minima quae ut. Pariatur velit quia illum aut. Unde molestias ratione excepturi doloremque iure.'
+                                  vote: null
+                                  created_at: '2024-01-06T21:26:27.000000Z'
+                                  updated_at: '2024-01-06T21:26:27.000000Z'
+                                -
+                                  id: 470
+                                  user_id: 470
+                                  product_id: 47
+                                  status: 1
+                                  comment: 'Impedit quia doloremque aut assumenda deleniti et. Et eligendi et sint placeat voluptas ullam tempora. Ipsum fugiat voluptatem vel ut.'
+                                  vote: 2
+                                  created_at: '2024-01-06T21:26:27.000000Z'
+                                  updated_at: '2024-01-06T21:26:27.000000Z'
+                              items:
+                                type: object
+                                properties:
+                                  id:
+                                    type: integer
+                                    example: 464
+                                  user_id:
+                                    type: integer
+                                    example: 464
+                                  product_id:
+                                    type: integer
+                                    example: 47
+                                  status:
+                                    type: integer
+                                    example: 1
+                                  comment:
+                                    type: string
+                                    example: 'Nisi minus beatae non ipsa minima quae ut. Pariatur velit quia illum aut. Unde molestias ratione excepturi doloremque iure.'
+                                  vote:
+                                    type: string
+                                    example: null
+                                  created_at:
+                                    type: string
+                                    example: '2024-01-06T21:26:27.000000Z'
+                                  updated_at:
+                                    type: string
+                                    example: '2024-01-06T21:26:27.000000Z'
+                      first_page_url:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/products?page=1'
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 2
+                      last_page_url:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/products?page=2'
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/products?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: 'http://127.0.0.1:8000/api/products?page=2'
+                            label: '2'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/products?page=2'
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      next_page_url:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/products?page=2'
+                      path:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/products'
+                      per_page:
+                        type: integer
+                        example: 20
+                      prev_page_url:
+                        type: string
+                        example: null
+                      to:
+                        type: integer
+                        example: 20
+                      total:
+                        type: integer
+                        example: 26
+      tags:
+        - Endpoints
+      security: []
+  '/api/products/{product_id}/reviews':
+    post:
+      summary: ''
+      operationId: postApiProductsProduct_idReviews
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                comment:
+                  type: string
+                  description: 'This field is required when <code>vote</code> is not present. Must not be greater than 2000 characters.'
+                  example: ysnwtbzahbe
+                vote:
+                  type: integer
+                  description: 'This field is required when <code>comment</code> is not present.'
+                  example: '5'
+                  enum:
+                    - '1'
+                    - '2'
+                    - '3'
+                    - '4'
+                    - '5'
+      security: []
+    parameters:
+      -
+        in: path
+        name: product_id
+        description: 'The ID of the product.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Endpoints
+    description: ''
