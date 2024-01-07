@@ -20,6 +20,8 @@ class ProductResource extends Resource
 
     protected static ?string $navigationGroup = 'Review service';
 
+    protected static ?string $recordTitleAttribute = 'name';
+
     public static function form(Form $form): Form
     {
         return $form
