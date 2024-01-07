@@ -23,7 +23,7 @@ class ProductFactory extends Factory
     {
         return [
             'provider_id' => Provider::factory(),
-            'name' => fake()->name,
+            'name' => fake()->sentence(3),
             'description' => fake()->paragraph,
             'set_to_commentable_at' => fake()->optional()->date,
             'set_to_votable_at' => fake()->optional()->date,
