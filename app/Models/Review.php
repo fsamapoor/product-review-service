@@ -28,6 +28,8 @@ use Staudenmeir\EloquentEagerLimit\HasEagerLimit;
  * @property Product $product
  *
  * @method approved()
+ * @method rejected()
+ * @method pending()
  * @method hasComment()
  * @method hasVote()
  */
@@ -49,6 +51,16 @@ class Review extends Model
     public function scopeApproved(Builder $query): void
     {
         $query->where('status', ReviewStatus::APPROVED->value);
+    }
+
+    public function scopeRejected(Builder $query): void
+    {
+        $query->where('status', ReviewStatus::REJECTED->value);
+    }
+
+    public function scopePending(Builder $query): void
+    {
+        $query->where('status', ReviewStatus::PENDING->value);
     }
 
     public function scopeHasComment(Builder $query): void

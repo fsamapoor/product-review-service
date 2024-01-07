@@ -6,6 +6,7 @@ namespace App\Filament\Resources;
 
 use App\Enums\ReviewStatus;
 use App\Filament\Resources\ReviewResource\Pages;
+use App\Filament\Resources\ReviewResource\Widgets\ReviewOverview;
 use App\Models\Review;
 use Filament\Forms;
 use Filament\Forms\Components\Select;
@@ -116,6 +117,13 @@ class ReviewResource extends Resource
     {
         return [
             'index' => Pages\ListReviews::route('/'),
+        ];
+    }
+
+    public static function getWidgets(): array
+    {
+        return [
+            ReviewOverview::class,
         ];
     }
 }
