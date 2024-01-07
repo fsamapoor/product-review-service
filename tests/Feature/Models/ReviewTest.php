@@ -45,6 +45,28 @@ it('only returns approved reviews for approved query scope.', function () {
         ->first()->id->toEqual(1);
 });
 
+it('only returns pending reviews for pending query scope.', function () {
+    // Arrange
+    Review::factory()->pending()->create();
+    Review::factory()->approved()->create();
+
+    // Act && Assert
+    expect(Review::query()->pending()->get())
+        ->toHaveCount(1)
+        ->first()->id->toEqual(1);
+});
+
+it('only returns rejected reviews for rejected query scope.', function () {
+    // Arrange
+    Review::factory()->rejected()->create();
+    Review::factory()->approved()->create();
+
+    // Act && Assert
+    expect(Review::query()->rejected()->get())
+        ->toHaveCount(1)
+        ->first()->id->toEqual(1);
+});
+
 it('only returns reviews with comments for hasComment query scope.', function () {
     // Arrange
     Review::factory()->withComment()->withoutVote()->create();

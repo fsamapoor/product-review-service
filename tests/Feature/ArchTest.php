@@ -6,7 +6,7 @@ test('the codebase does not reference env variables outside of config files')
     ->expect('env')
     ->not->toBeUsed();
 
-test('app')
+test('app classes use strict types.')
     ->expect('App')
     ->toUseStrictTypes();
 

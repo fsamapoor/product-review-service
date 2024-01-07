@@ -19,6 +19,15 @@ enum ReviewStatus: int
         };
     }
 
+    public function color(): string
+    {
+        return match ($this) {
+            self::PENDING => 'warning',
+            self::APPROVED => 'success',
+            self::REJECTED => 'danger',
+        };
+    }
+
     public static function options(): array
     {
         return collect(self::cases())
