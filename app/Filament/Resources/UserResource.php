@@ -42,7 +42,8 @@ class UserResource extends Resource
                             ->minLength(8)
                             ->maxLength(100),
                         Forms\Components\TextInput::make('password_confirmation')
-                            ->password(),
+                            ->password()
+                            ->dehydrated(false),
                     ])
                     ->columns(2)
                     ->columnSpan(['lg' => fn (?User $record) => $record === null ? 3 : 2]),
