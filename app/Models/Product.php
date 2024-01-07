@@ -31,6 +31,8 @@ use Staudenmeir\EloquentEagerLimit\HasEagerLimit;
  * @property Collection<int, Review> $reviews
  *
  * @method published()
+ * @method commentable()
+ * @method votable()
  */
 class Product extends Model
 {
@@ -47,6 +49,16 @@ class Product extends Model
     public function scopePublished(Builder $query): void
     {
         $query->whereNotNull('published_at');
+    }
+
+    public function scopeCommentable(Builder $query): void
+    {
+        $query->whereNotNull('set_to_commentable_at');
+    }
+
+    public function scopeVotable(Builder $query): void
+    {
+        $query->whereNotNull('set_to_votable_at');
     }
 
     public function provider(): BelongsTo
