@@ -5,6 +5,7 @@ declare(strict_types=1);
 use App\Enums\ReviewRating;
 use App\Events\ReviewSubmitted;
 use App\Models\Product;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Log;
 use TiMacDonald\Log\LogEntry;
@@ -42,7 +43,7 @@ it('can submit a review for votable published products.', function () {
 
     // Act & Assert
     postJson(route('reviews.store', $product->id), [
-        'vote' => array_rand(ReviewRating::values()),
+        'vote' => Arr::random(ReviewRating::values()),
     ])
         ->assertCreated();
 
