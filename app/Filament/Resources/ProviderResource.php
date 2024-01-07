@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProviderResource\Pages;
+use App\Filament\Resources\ProviderResource\RelationManagers\ProductsRelationManager;
 use App\Models\Provider;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -55,7 +56,7 @@ class ProviderResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            ProductsRelationManager::class,
         ];
     }
 
