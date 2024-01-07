@@ -17,6 +17,8 @@ use Staudenmeir\EloquentEagerLimit\HasEagerLimit;
  * App\Models\Review
  *
  * @property int $id
+ * @property int $user_id
+ * @property int $product_id
  * @property int $status
  * @property ?string $comment
  * @property ?int $vote
